@@ -5,12 +5,20 @@ import "../app/styles/animate.min.css";
 import "../app/styles/boxicons.min.css";
 import "../app/styles/meanmenu.min.css";
 import "../app/styles/flaticon.css";
+import "../app/styles/flaticon.css";
 import "react-modal-video/css/modal-video.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "react-tabs/style/react-tabs.css";
 import "react-18-image-lightbox/style.css";
 import "swiper/css";
 import "swiper/css/bundle";
+// Global Styles
+import "../app/styles/style.css";
+// Global Responsive Styles
+import "../app/styles/responsive.css";
+
+import TosterProvider from "@/providers/TosterProvider";
+import Navbar from "@/components/Layout/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +30,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<TosterProvider />
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }
