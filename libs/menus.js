@@ -5,7 +5,7 @@ export const menus = [
 		submenu: [
 			{
 				label: "eLearning School",
-				link: "/eLearning-school",
+				link: "/elearning-school",
 			},
 			{
 				label: "Distance Learning",

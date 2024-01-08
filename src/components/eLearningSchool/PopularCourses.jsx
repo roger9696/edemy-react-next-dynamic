@@ -2,16 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import CourseCard from "../Shared/CourseCard";
 
-const TopSellingCourses = () => {
+const PopularCourses = () => {
 	return (
 		<div className="courses-area ptb-100">
 			<div className="container">
 				<div className="section-title">
-					<span className="sub-title">GO AT YOUR OWN PACE</span>
-					<h2>Top Selling Courses</h2>
+					<span className="sub-title">Learn At Your Own Pace</span>
+					<h2>eDemy Popular Courses</h2>
 					<p>
 						Explore all of our courses and pick your suitable ones
 						to enroll and start learning with us! We ensure that you
@@ -19,7 +18,7 @@ const TopSellingCourses = () => {
 					</p>
 				</div>
 
-				<div className="row justify-content-center">
+				<div className="row">
 					<CourseCard />
 					<CourseCard />
 					<CourseCard />
@@ -43,4 +42,4 @@ const TopSellingCourses = () => {
 	);
 };
 
-export default TopSellingCourses;
+export default PopularCourses;
