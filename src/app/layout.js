@@ -19,6 +19,7 @@ import "../app/styles/responsive.css";
 
 import TosterProvider from "@/providers/TosterProvider";
 import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 				<TosterProvider />
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
