@@ -12,6 +12,10 @@ export const menus = [
 				link: "/vendor-certification-training",
 			},
 			{
+				label: "Online Training School",
+				link: "/online-training-school",
+			},
+			{
 				label: "Distance Learning",
 				link: "/distance-learning",
 			},
@@ -43,10 +47,7 @@ export const menus = [
 				label: "Online Photography",
 				link: "/online-photography",
 			},
-			{
-				label: "Online Training School",
-				link: "/online-training-school",
-			},
+
 			{
 				label: "Undergraduate",
 				link: "/undergraduate",
