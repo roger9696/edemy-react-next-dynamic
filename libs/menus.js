@@ -8,6 +8,10 @@ export const menus = [
 				link: "/elearning-school",
 			},
 			{
+				label: "Vendor Certification Training",
+				link: "/vendor-certification-training",
+			},
+			{
 				label: "Distance Learning",
 				link: "/distance-learning",
 			},
@@ -47,10 +51,7 @@ export const menus = [
 				label: "Undergraduate",
 				link: "/undergraduate",
 			},
-			{
-				label: "Vendor Certification Training",
-				link: "/vendor-certification-training",
-			},
+
 			{
 				label: "Yoga Training",
 				link: "/yoga-training",
