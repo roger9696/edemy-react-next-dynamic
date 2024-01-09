@@ -24,17 +24,16 @@ export const menus = [
 				link: "/language-school",
 			},
 			{
+				label: "Modern Schooling",
+				link: "/modern-schooling",
+			},
+			{
 				label: "Kindergaten",
 				link: "/kindergaten",
 			},
 			{
 				label: "Kitchen Coach",
 				link: "/kitchen-coach",
-			},
-
-			{
-				label: "Modern Schooling",
-				link: "/modern-schooling",
 			},
 			{
 				label: "Motivation",

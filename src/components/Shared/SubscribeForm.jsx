@@ -3,9 +3,11 @@
 import Image from "next/image";
 import React from "react";
 
-const SubscribeForm = () => {
+const SubscribeForm = ({
+	mainClsAtts = "subscribe-area bg-f9f9f9 ptb-100",
+}) => {
 	return (
-		<div className="subscribe-area bg-f9f9f9 ptb-100">
+		<div className={mainClsAtts}>
 			<div className="container">
 				<div className="subscribe-content">
 					<span className="sub-title">Go At Your Own Pace</span>
