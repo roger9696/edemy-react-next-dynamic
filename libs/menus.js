@@ -20,6 +20,10 @@ export const menus = [
 				link: "/distance-learning",
 			},
 			{
+				label: "Language School",
+				link: "/language-school",
+			},
+			{
 				label: "Kindergaten",
 				link: "/kindergaten",
 			},
@@ -27,10 +31,7 @@ export const menus = [
 				label: "Kitchen Coach",
 				link: "/kitchen-coach",
 			},
-			{
-				label: "Language School",
-				link: "/language-school",
-			},
+
 			{
 				label: "Modern Schooling",
 				link: "/modern-schooling",
