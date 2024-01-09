@@ -2,9 +2,9 @@
 
 import React from "react";
 
-const FunFacts = () => {
+const FunFacts = ({ mainClsAtts = "funfacts-area bg-f5f7fa" }) => {
 	return (
-		<div className="funfacts-area bg-f5f7fa">
+		<div className={mainClsAtts}>
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-3 col-md-3 col-sm-6">

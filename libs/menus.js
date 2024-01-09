@@ -28,6 +28,10 @@ export const menus = [
 				link: "/modern-schooling",
 			},
 			{
+				label: "Yoga Training",
+				link: "/yoga-training",
+			},
+			{
 				label: "Kindergaten",
 				link: "/kindergaten",
 			},
@@ -51,11 +55,6 @@ export const menus = [
 			{
 				label: "Undergraduate",
 				link: "/undergraduate",
-			},
-
-			{
-				label: "Yoga Training",
-				link: "/yoga-training",
 			},
 		],
 	},
