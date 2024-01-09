@@ -5,9 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 
-const Partner = () => {
+const Partner = ({ mainClsAtts = "partner-area ptb-70" }) => {
 	return (
-		<div className="partner-area ptb-70">
+		<div className={mainClsAtts}>
 			<div className="container">
 				<Swiper
 					slidesPerView={1}
