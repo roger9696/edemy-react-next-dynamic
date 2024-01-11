@@ -44,6 +44,10 @@ export const menus = [
 				link: "/gym-coaching",
 			},
 			{
+				label: "Business Coach",
+				link: "/business-coach",
+			},
+			{
 				label: "Kitchen Coach",
 				link: "/kitchen-coach",
 			},
