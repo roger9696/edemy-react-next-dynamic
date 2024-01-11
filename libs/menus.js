@@ -48,12 +48,12 @@ export const menus = [
 				link: "/business-coach",
 			},
 			{
-				label: "Kitchen Coach",
-				link: "/kitchen-coach",
-			},
-			{
 				label: "Motivation",
 				link: "/motivation",
+			},
+			{
+				label: "Kitchen Coach",
+				link: "/kitchen-coach",
 			},
 			{
 				label: "Online Art",
