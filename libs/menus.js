@@ -36,8 +36,12 @@ export const menus = [
 				link: "/health-coaching",
 			},
 			{
-				label: "Kindergaten",
-				link: "/kindergaten",
+				label: "Kindergarten",
+				link: "/kindergarten",
+			},
+			{
+				label: "Gym Coaching",
+				link: "/gym-coaching",
 			},
 			{
 				label: "Kitchen Coach",
