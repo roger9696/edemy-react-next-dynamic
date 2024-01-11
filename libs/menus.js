@@ -32,6 +32,10 @@ export const menus = [
 				link: "/yoga-training",
 			},
 			{
+				label: "Health Coaching",
+				link: "/health-coaching",
+			},
+			{
 				label: "Kindergaten",
 				link: "/kindergaten",
 			},
