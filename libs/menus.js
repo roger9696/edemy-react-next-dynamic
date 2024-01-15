@@ -64,13 +64,12 @@ export const menus = [
 				link: "/single-instructor",
 			},
 			{
+				label: "College Website",
+				link: "/college-website",
+			},
+			{
 				label: "Online Photography",
 				link: "/online-photography",
-			},
-
-			{
-				label: "Undergraduate",
-				link: "/undergraduate",
 			},
 		],
 	},
