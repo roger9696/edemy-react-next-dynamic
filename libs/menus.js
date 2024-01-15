@@ -60,6 +60,10 @@ export const menus = [
 				link: "/online-art",
 			},
 			{
+				label: "Single Instructor",
+				link: "/single-instructor",
+			},
+			{
 				label: "Online Photography",
 				link: "/online-photography",
 			},
