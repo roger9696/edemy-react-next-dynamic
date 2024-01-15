@@ -5,7 +5,7 @@ import AboutUsContent from "@/components/CollegeWebsiteInnerPages/AboutCollege/A
 import Features from "@/components/CollegeWebsiteInnerPages/AboutCollege/Features";
 import MessageFromCollegeDean from "@/components/CollegeWebsiteInnerPages/AboutCollege/MessageFromCollegeDean";
 import WelcomeToCollege from "@/components/CollegeWebsiteInnerPages/AboutCollege/WelcomeToCollege";
-import PageBanner from "@/components/Shared/PageBanner";
+import PageBanner from "@/components/CollegeWebsiteInnerPages/PageBanner";
 
 const page = () => {
 	return (
