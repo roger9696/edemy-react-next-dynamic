@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PartnerSlider from "./PartnerSlider";
 
-const HeroBanner = () => {
+const Banner = () => {
 	return (
 		<>
 			<div className="cw-hero-banner overflow-hidden">
@@ -162,4 +162,4 @@ const HeroBanner = () => {
 	);
 };
 
-export default HeroBanner;
+export default Banner;

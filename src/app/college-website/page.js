@@ -1,4 +1,4 @@
-import HeroBanner from "@/components/CollegeWebsite/Banner";
+import Banner from "@/components/CollegeWebsite/Banner";
 import CollegeAmissions from "@/components/CollegeWebsite/CollegeAmissions";
 import CollegeStaff from "@/components/CollegeWebsite/CollegeStaff";
 import CoursesSlider from "@/components/CollegeWebsite/CoursesSlider";
@@ -12,7 +12,7 @@ import WelcomeToeDemyCollege from "@/components/CollegeWebsite/WelcomeToeDemyCol
 const page = () => {
 	return (
 		<>
-			<HeroBanner />
+			<Banner />
 			<CoursesSlider />
 			<WelcomeToeDemyCollege />
 			<FunFacts />
