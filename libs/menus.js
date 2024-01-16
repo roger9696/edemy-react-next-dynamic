@@ -182,6 +182,20 @@ export const menus = [
 		],
 	},
 	{
+		label: "Products",
+		link: "#",
+		submenu: [
+			{
+				label: "Products",
+				link: "/products",
+			},
+			{
+				label: "Products Style 2",
+				link: "/products/2",
+			},
+		],
+	},
+	{
 		label: "Contact",
 		link: "/contact",
 	},
