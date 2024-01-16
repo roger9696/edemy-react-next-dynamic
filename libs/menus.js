@@ -193,6 +193,18 @@ export const menus = [
 				label: "Products Style 2",
 				link: "/products/2",
 			},
+			{
+				label: "Product Details",
+				link: "/products/details",
+			},
+			{
+				label: "Cart",
+				link: "/cart",
+			},
+			{
+				label: "Checkout",
+				link: "/checkout",
+			},
 		],
 	},
 	{
