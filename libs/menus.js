@@ -168,6 +168,20 @@ export const menus = [
 		],
 	},
 	{
+		label: "Events",
+		link: "#",
+		submenu: [
+			{
+				label: "Events",
+				link: "/events",
+			},
+			{
+				label: "Event Details",
+				link: "/events/single-events",
+			},
+		],
+	},
+	{
 		label: "Contact",
 		link: "/contact",
 	},
