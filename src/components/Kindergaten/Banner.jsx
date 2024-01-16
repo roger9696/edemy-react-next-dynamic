@@ -31,7 +31,7 @@ const Banner = () => {
 							</p>
 
 							<Link
-								href="/profile-authentication"
+								href="/auth"
 								className="default-btn-style-two"
 							>
 								<i className="flaticon-user"></i> Join For Free

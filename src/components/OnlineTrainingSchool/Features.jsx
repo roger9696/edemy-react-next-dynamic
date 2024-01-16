@@ -30,10 +30,7 @@ const Features = () => {
 								alteration.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -51,10 +48,7 @@ const Features = () => {
 								alteration.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -72,10 +66,7 @@ const Features = () => {
 								alteration.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>

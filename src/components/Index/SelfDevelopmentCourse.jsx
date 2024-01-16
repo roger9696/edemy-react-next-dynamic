@@ -29,10 +29,7 @@ const SelfDevelopmentCourse = () => {
 									you go.
 								</p>
 
-								<Link
-									href="/profile-authentication"
-									className="default-btn"
-								>
+								<Link href="/auth" className="default-btn">
 									<i className="flaticon-user"></i>Start For
 									Free<span></span>
 								</Link>

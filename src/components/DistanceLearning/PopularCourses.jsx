@@ -67,10 +67,7 @@ const PopularCourses = () => {
 							Get the most dedicated consultation for your
 							life-changing course. Earn a certification for your
 							effort and passion{" "}
-							<Link href="/profile-authentication">
-								Join Free Now
-							</Link>
-							.
+							<Link href="/auth">Join Free Now</Link>.
 						</p>
 					</div>
 				</div>

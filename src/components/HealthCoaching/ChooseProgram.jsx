@@ -26,10 +26,7 @@ const ChooseProgram = () => {
 								skills.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="default-btn"
-							>
+							<Link href="/auth" className="default-btn">
 								<i className="flaticon-user"></i> Get Started
 								Now <span></span>
 							</Link>

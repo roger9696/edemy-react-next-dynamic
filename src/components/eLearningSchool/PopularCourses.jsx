@@ -29,10 +29,7 @@ const PopularCourses = () => {
 								Enjoy the top notch learning methods and achieve
 								next level skills! You are the creator of your
 								own career & we will guide you through that.{" "}
-								<Link href="/profile-authentication">
-									Register Free Now!
-								</Link>
-								.
+								<Link href="/auth">Register Free Now!</Link>.
 							</p>
 						</div>
 					</div>

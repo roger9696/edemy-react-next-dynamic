@@ -22,10 +22,7 @@ const Banner = () => {
 								you to enjoy the beauty of eLearning!
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="default-btn"
-							>
+							<Link href="/auth" className="default-btn">
 								<i className="flaticon-user"></i> Join For Free{" "}
 								<span></span>
 							</Link>

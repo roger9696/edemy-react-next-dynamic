@@ -31,10 +31,7 @@ const Features = () => {
 								outcome in a career.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -51,10 +48,7 @@ const Features = () => {
 								pace & that gives a great result.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -71,10 +65,7 @@ const Features = () => {
 								faster with their best approaches!
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -91,10 +82,7 @@ const Features = () => {
 								learning from anywhere in the world.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="link-btn"
-							>
+							<Link href="/auth" className="link-btn">
 								Start Now!
 							</Link>
 						</div>

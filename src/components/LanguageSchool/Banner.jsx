@@ -18,10 +18,7 @@ const Banner = () => {
 								incididunt ut labore et dolore magna aliqua.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="default-btn"
-							>
+							<Link href="/auth" className="default-btn">
 								<i className="flaticon-user"></i> Join For Free{" "}
 								<span></span>
 							</Link>

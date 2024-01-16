@@ -148,9 +148,7 @@ const FeedbackSliderWithFunFacts = () => {
 								<div className="feedback-info">
 									<p>
 										Not a member yet?​{" "}
-										<Link href="/profile-authentication">
-											Register Now
-										</Link>
+										<Link href="/auth">Register Now</Link>
 									</p>
 								</div>
 							</div>

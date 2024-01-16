@@ -95,7 +95,7 @@ const Navbar = () => {
 
 									<div className="option-item">
 										<Link
-											href="/profile-authentication"
+											href="/auth"
 											className="default-btn"
 										>
 											<i className="flaticon-user"></i>{" "}

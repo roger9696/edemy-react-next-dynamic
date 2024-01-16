@@ -32,10 +32,7 @@ const Features = () => {
 									adipiscing elit, sed do eiusmod tempor{" "}
 								</p>
 
-								<Link
-									href="/profile-authentication"
-									className="link-btn"
-								>
+								<Link href="/auth" className="link-btn">
 									Start Now!
 								</Link>
 
@@ -56,10 +53,7 @@ const Features = () => {
 									adipiscing elit, sed do eiusmod tempor{" "}
 								</p>
 
-								<Link
-									href="/profile-authentication"
-									className="link-btn"
-								>
+								<Link href="/auth" className="link-btn">
 									Start Now!
 								</Link>
 
@@ -80,10 +74,7 @@ const Features = () => {
 									adipiscing elit, sed do eiusmod tempor{" "}
 								</p>
 
-								<Link
-									href="/profile-authentication"
-									className="link-btn"
-								>
+								<Link href="/auth" className="link-btn">
 									Start Now!
 								</Link>
 

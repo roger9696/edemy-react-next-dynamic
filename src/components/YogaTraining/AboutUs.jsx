@@ -38,10 +38,7 @@ const AboutUs = () => {
 								skills.
 							</p>
 
-							<Link
-								href="/profile-authentication"
-								className="default-btn mt-2"
-							>
+							<Link href="/auth" className="default-btn mt-2">
 								<i className="flaticon-user"></i> Join For Free{" "}
 								<span></span>
 							</Link>

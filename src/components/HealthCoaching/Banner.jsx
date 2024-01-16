@@ -33,10 +33,7 @@ const Banner = () => {
 							</p>
 							<div className="btn-box">
 								<div className="d-flex align-items-center">
-									<Link
-										href="/profile-authentication"
-										className="default-btn"
-									>
+									<Link href="/auth" className="default-btn">
 										<i className="flaticon-user"></i> Join
 										For Free <span></span>
 									</Link>
