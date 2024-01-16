@@ -94,14 +94,70 @@ export const menus = [
 				link: "/gallery",
 			},
 			{
-				label: "faq",
-				link: "/FAQs",
+				label: "FAQs",
+				link: "/faq",
 			},
 		],
 	},
 	{
 		label: "About",
-		link: "/about",
+		link: "#",
+		submenu: [
+			{
+				label: "About",
+				link: "/about",
+			},
+			{
+				label: "About 2",
+				link: "/about/2",
+			},
+			{
+				label: "About 3",
+				link: "/about/3",
+			},
+		],
+	},
+	{
+		label: "College",
+		link: "#",
+		submenu: [
+			{
+				label: "About College",
+				link: "/college",
+			},
+			{
+				label: "Accommodation",
+				link: "/college/accommodation",
+			},
+			{
+				label: "Administration",
+				link: "/college/administration",
+			},
+			{
+				label: "Admissions",
+				link: "/college/admissions",
+			},
+			{
+				label: "Apply",
+				link: "/college/apply-now",
+			},
+			{
+				label: "business",
+				link: "/college/business",
+			},
+			{
+				label: "Faculties Teachers",
+				link: "/college/faculties-teachers",
+			},
+			{
+				label: "Fees And Scholarships",
+				link: "/college/fees-and-scholarships",
+			},
+			{
+				label: "Undergraduate",
+				link: "/college/undergraduate",
+			},
+		],
 	},
 	{
 		label: "Contact",
