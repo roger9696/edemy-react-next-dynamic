@@ -6,9 +6,11 @@ import Image from "next/image";
 import { menus } from "../../../libs/menus";
 import MenuItem from "./MenuItem";
 import MegaMenu from "./MegaMenu";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
 	const [menu, setMenu] = React.useState(true);
+	const pathname = usePathname();
 
 	React.useEffect(() => {
 		let elementId = document.getElementById("navbar");
@@ -27,6 +29,10 @@ const Navbar = () => {
 	const classTwo = menu
 		? "navbar-toggler navbar-toggler-right collapsed"
 		: "navbar-toggler navbar-toggler-right";
+
+	if (pathname === "/coming-soon") {
+		return;
+	}
 
 	return (
 		<>

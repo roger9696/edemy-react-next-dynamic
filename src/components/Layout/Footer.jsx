@@ -3,9 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
+	const pathname = usePathname();
+	if (pathname === "/coming-soon") {
+		return;
+	}
 
 	return (
 		<footer className="footer-area">

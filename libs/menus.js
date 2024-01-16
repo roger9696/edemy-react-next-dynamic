@@ -97,6 +97,14 @@ export const menus = [
 				label: "FAQs",
 				link: "/faq",
 			},
+			{
+				label: "Purchase Guide",
+				link: "/purchase-guide",
+			},
+			{
+				label: "Coming Soon",
+				link: "/coming-soon",
+			},
 		],
 	},
 	{
