@@ -75,7 +75,33 @@ export const menus = [
 	},
 	{
 		label: "Courses",
-		link: "/courses",
+		link: "#",
+		submenu: [
+			{
+				label: "Courses",
+				link: "/courses",
+			},
+			{
+				label: "Courses Style 2",
+				link: "/courses/2",
+			},
+			{
+				label: "Courses Style 3",
+				link: "/courses/3",
+			},
+			{
+				label: "Courses Style 4",
+				link: "/courses/4",
+			},
+			{
+				label: "Courses Style 5",
+				link: "/courses/5",
+			},
+			{
+				label: "Courses Style 6",
+				link: "/courses/6",
+			},
+		],
 	},
 	{
 		label: "Pages",
@@ -208,7 +234,37 @@ export const menus = [
 		],
 	},
 	{
-		label: "Contact",
-		link: "/contact",
+		label: "Blog",
+		link: "#",
+		submenu: [
+			{
+				label: "Blog",
+				link: "/blog",
+			},
+			{
+				label: "Blog Style 2",
+				link: "/blog/2",
+			},
+			{
+				label: "Blog Style 3",
+				link: "/blog/3",
+			},
+			{
+				label: "Blog Style 4",
+				link: "/blog/4",
+			},
+			{
+				label: "Details",
+				link: "/blog/details",
+			},
+			{
+				label: "Details Style 2",
+				link: "/blog/details/2",
+			},
+			{
+				label: "Details Style 3",
+				link: "/blog/details/3",
+			},
+		],
 	},
 ];
