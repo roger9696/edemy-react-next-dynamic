@@ -124,6 +124,10 @@ export const menus = [
 				link: "/faq",
 			},
 			{
+				label: "Contact",
+				link: "/contact",
+			},
+			{
 				label: "Purchase Guide",
 				link: "/purchase-guide",
 			},
