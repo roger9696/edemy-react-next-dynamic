@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const MenuItem = ({ label, link, submenu }) => {
+	const pathname = usePathname();
 	if (submenu) {
 		return (
 			<li className="nav-item" key={label}>
@@ -11,13 +13,21 @@ const MenuItem = ({ label, link, submenu }) => {
 				</Link>
 
 				<ul className="dropdown-menu">
-					{submenu.map((subItem) => (
-						<li className="nav-item" key={subItem.label}>
-							<Link href={subItem.link} className="nav-link">
-								{subItem.label}
-							</Link>
-						</li>
-					))}
+					{submenu.map((subItem) => {
+						const isActive = pathname == subItem.link;
+						return (
+							<li className="nav-item" key={subItem.label}>
+								<Link
+									href={subItem.link}
+									className={`nav-link ${
+										isActive ? "active" : ""
+									}`}
+								>
+									{subItem.label}
+								</Link>
+							</li>
+						);
+					})}
 				</ul>
 			</li>
 		);
