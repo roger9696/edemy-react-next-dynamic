@@ -1,39 +1,74 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import Input from "../FormHelpers/Input";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const RegisterForm = () => {
+	const [isLoading, setIsLoading] = useState(false);
+
+	const {
+		register,
+		handleSubmit,
+		setError,
+		reset,
+		formState: { errors },
+	} = useForm({
+		defaultValues: {
+			name: "",
+			email: "",
+			password: "",
+		},
+	});
+
+	const onSubmit = async (data) => {
+		setIsLoading(true);
+		await axios
+			.post("/api/register", data)
+			.then(() => {
+				toast.success("Registration success! Please login.");
+				reset();
+			})
+			.catch((error) => {
+				toast.error("Something went wrong!");
+			})
+			.finally(() => {
+				setIsLoading(false);
+			});
+	};
+
 	return (
 		<div className="register-form">
 			<h2>Register</h2>
 
-			<form>
-				<div className="form-group">
-					<label>Username</label>
-					<input
-						type="text"
-						className="form-control"
-						placeholder="Username or email"
-					/>
-				</div>
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<Input
+					label="Full Name"
+					id="name"
+					disabled={isLoading}
+					register={register}
+					errors={errors}
+				/>
 
-				<div className="form-group">
-					<label>Email</label>
-					<input
-						type="email"
-						className="form-control"
-						placeholder="Username or email"
-					/>
-				</div>
+				<Input
+					label="Email"
+					id="email"
+					type="email"
+					disabled={isLoading}
+					register={register}
+					errors={errors}
+				/>
 
-				<div className="form-group">
-					<label>Password</label>
-					<input
-						type="password"
-						className="form-control"
-						placeholder="Password"
-					/>
-				</div>
+				<Input
+					type="password"
+					label="Password"
+					id="password"
+					disabled={isLoading}
+					register={register}
+					errors={errors}
+				/>
 
 				<p className="description">
 					The password should be at least eight characters long. To
@@ -41,7 +76,9 @@ const RegisterForm = () => {
 					and symbols like ! " ? $ % ^ & )
 				</p>
 
-				<button type="submit">Register</button>
+				<button type="submit" disabled={isLoading}>
+					{isLoading ? "Please wait..." : "Register"}
+				</button>
 			</form>
 		</div>
 	);

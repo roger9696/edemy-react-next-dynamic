@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import prisma from "@/libs/prismadb";
+import prisma from "../../../../libs/prismadb";
 
 export async function POST(request) {
 	const body = await request.json();
@@ -10,7 +10,7 @@ export async function POST(request) {
 		where: { email: email },
 	});
 
-	if (existingUser.length > 0) {
+	if (existingUser && existingUser.length > 0) {
 		return NextResponse.json({ message: "Email already exist!" });
 	}
 
