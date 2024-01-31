@@ -1,8 +1,14 @@
+import { getCurrentUser } from "@/actions/getCurrentUser";
 import LoginForm from "@/components/Auth/LoginForm";
 import RegisterForm from "@/components/Auth/RegisterForm";
 import PageBanner from "@/components/Shared/PageBanner";
+import { redirect } from "next/navigation";
 
-const page = () => {
+const page = async () => {
+	const currentUser = await getCurrentUser();
+	if (currentUser) {
+		redirect("/");
+	}
 	return (
 		<>
 			<PageBanner

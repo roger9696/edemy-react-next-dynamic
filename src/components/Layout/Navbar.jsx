@@ -7,8 +7,9 @@ import { menus } from "../../../libs/menus";
 import MenuItem from "./MenuItem";
 import MegaMenu from "./MegaMenu";
 import { usePathname } from "next/navigation";
+import UserMenu from "./UserMenu";
 
-const Navbar = () => {
+const Navbar = ({ currentUser }) => {
 	const [menu, setMenu] = React.useState(true);
 	const pathname = usePathname();
 
@@ -99,15 +100,7 @@ const Navbar = () => {
 										</div>
 									</div>
 
-									<div className="option-item">
-										<Link
-											href="/auth"
-											className="default-btn"
-										>
-											<i className="flaticon-user"></i>{" "}
-											Login/Register <span></span>
-										</Link>
-									</div>
+									<UserMenu currentUser={currentUser} />
 								</div>
 							</div>
 						</div>
