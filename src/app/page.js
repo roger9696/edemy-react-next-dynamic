@@ -1,3 +1,4 @@
+import { getCurrentUser } from "@/actions/getCurrentUser";
 import Banner from "@/components/Index/Banner";
 import DistanceLearning from "@/components/Index/DistanceLearning";
 import Features from "@/components/Index/Features";
@@ -11,15 +12,16 @@ import DistanceLearningTwo from "@/components/Shared/DistanceLearningTwo";
 import FunFactsFour from "@/components/Shared/FunFactsFour";
 import LatestNews from "@/components/Shared/LatestNews";
 
-export default function Home() {
+export default async function Home() {
+	const currentUser = await getCurrentUser();
 	return (
 		<>
-			<Banner />
+			<Banner currentUser={currentUser} />
 			<Features />
 			<TopSellingCourses />
 			<DistanceLearning />
 			<Testimonials />
-			<SelfDevelopmentCourse />
+			<SelfDevelopmentCourse currentUser={currentUser} />
 			<Partner />
 			<IntroVideo />
 			<FunFactsFour />

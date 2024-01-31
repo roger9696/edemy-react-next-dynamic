@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const SelfDevelopmentCourse = () => {
+const SelfDevelopmentCourse = ({ currentUser }) => {
 	return (
 		<>
 			<div className="get-instant-courses-area-two bg-f9fbff">
@@ -29,10 +29,12 @@ const SelfDevelopmentCourse = () => {
 									you go.
 								</p>
 
-								<Link href="/auth" className="default-btn">
-									<i className="flaticon-user"></i>Start For
-									Free<span></span>
-								</Link>
+								{!currentUser && (
+									<Link href="/auth" className="default-btn">
+										<i className="flaticon-user"></i>Start
+										For Free<span></span>
+									</Link>
+								)}
 							</div>
 						</div>
 

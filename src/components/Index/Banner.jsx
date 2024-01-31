@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Banner = () => {
+const Banner = ({ currentUser }) => {
 	return (
 		<div className="main-banner-area">
 			<div className="container-fluid">
@@ -21,10 +21,13 @@ const Banner = () => {
 								Quis ipsum suspendisse.
 							</p>
 
-							<Link href="/auth" className="default-btn">
-								<i className="flaticon-user"></i>Join For Free
-								<span></span>
-							</Link>
+							{!currentUser && (
+								<Link href="/auth" className="default-btn">
+									<i className="flaticon-user"></i>Join For
+									Free
+									<span></span>
+								</Link>
+							)}
 						</div>
 					</div>
 
