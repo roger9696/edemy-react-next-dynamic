@@ -75,8 +75,7 @@ Default CSS
 body {
 	padding: 0;
 	margin: 0;
-	font-size: 16px;
-	font-family: "Nunito", sans-serif;
+	font-size: 16px; 
 }
 
 img {
@@ -219,6 +218,38 @@ h6 {
 .mtb-100 {
 	margin-top: 100px;
 	margin-bottom: 100px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.mt-minus-2 {
+  margin-top: -2px;
 }
 
 a {
@@ -1356,6 +1387,50 @@ Navbar Area CSS
 }
 .edemy-nav .navbar .others-option .option-item:first-child {
 	margin-left: 0;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .img img {
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu {
+  right: 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+  border: 1px solid #eee;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu .dropdown-item {
+  position: relative;
+  padding: 8px 22px 8px 45px;
+  font-size: 15px;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu .dropdown-item:active {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: var(--bs-dropdown-link-hover-bg);
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu .dropdown-item.author-dropdown-item {
+  padding-left: 22px;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu .dropdown-item i {
+  position: absolute;
+  top: 8px;
+  font-size: 18px;
+  left: 20px;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu .dropdown-item i.bx-log-out {
+  top: 10px;
+}
+.edemy-nav .navbar .others-option .option-item .profile-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
 }
 .edemy-nav .navbar .others-option .cart-btn {
 	font-size: 22px;
@@ -20020,6 +20095,4 @@ Coaching Banner Area CSS
 	right: 180px;
 	top: 45px;
 }
-
-/* End op-subscribe-content */
-/* End Online Photography Home */ /*# sourceMappingURL=style.css.map */
+/* End op-subscribe-content */ 

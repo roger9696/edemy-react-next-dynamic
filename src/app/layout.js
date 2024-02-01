@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import "../app/styles/bootstrap.min.css";
 import "../app/styles/animate.min.css";
@@ -16,13 +16,15 @@ import "swiper/css/bundle";
 import "../app/styles/style.css";
 // Global Responsive Styles
 import "../app/styles/responsive.css";
+// Global Dashboard Styles
+import "../app/styles/dashboard.css";
 
 import TosterProvider from "@/providers/TosterProvider";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "eDemy - React Next.js Education LMS Template",
@@ -33,7 +35,7 @@ export default async function RootLayout({ children }) {
 	const currentUser = await getCurrentUser();
 	return (
 		<html lang="en">
-			<body className={inter.className} suppressHydrationWarning={true}>
+			<body className={nunito.className} suppressHydrationWarning={true}>
 				<TosterProvider />
 				<Navbar currentUser={currentUser} />
 				{children}
