@@ -12,17 +12,20 @@ datasource db {
 }
 
 model User {
-    id             Int       @id @default(autoincrement())
+    id             Int         @id @default(autoincrement())
     name           String?
-    email          String?   @unique
+    email          String?     @unique
     emailVerified  DateTime?
     image          String?
     hashedPassword String?
-    role           Role      @default(USER)
-    created_at     DateTime  @default(now())
-    updated_at     DateTime  @updatedAt
+    role           Role        @default(USER)
+    is_instructor  Boolean     @default(false)
+    created_at     DateTime    @default(now())
+    updated_at     DateTime    @updatedAt
     accounts       Account[]
     profile        Profile?
+    courses        Course[]
+    favourites     Favourite[]
 }
 
 model Profile {
@@ -60,7 +63,58 @@ model Account {
     @@index([userId])
 }
 
+model Category {
+    id      Int      @id @default(autoincrement())
+    name    String
+    slug    String
+    courses Course[]
+}
+
+model Course {
+    id                     Int      @id @default(autoincrement())
+    userId                 Int
+    catId                  Int
+    title                  String
+    slug                   String
+    description            String   @db.Text
+    regular_price          Float
+    before_price           Float
+    lessons                String
+    duration               String
+    image                  String
+    access_time            String
+    requirements           String   @db.Text
+    what_you_will_learn    String   @db.Text
+    who_is_this_course_for String   @db.Text
+    status                 Status   @default(Pending)
+    in_home_page           Boolean  @default(false)
+    in_home_page_set_at    DateTime @default(now())
+
+    category   Category    @relation(fields: [catId], references: [id], onDelete: Cascade)
+    user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+    favourites Favourite[]
+
+    @@index([userId, catId])
+}
+
+model Favourite {
+    id         Int      @id @default(autoincrement())
+    userId     Int
+    courseId   Int
+    created_at DateTime @default(now())
+    user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    course     Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+    @@index([userId, courseId])
+}
+
 enum Role {
     USER
+    INSTRUCTOR
     ADMIN
+}
+
+enum Status {
+    Pending
+    Approved
 }
