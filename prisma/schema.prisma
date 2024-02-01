@@ -26,6 +26,7 @@ model User {
     profile        Profile?
     courses        Course[]
     favourites     Favourite[]
+    enrolments     Enrolment[]
 }
 
 model Profile {
@@ -93,8 +94,27 @@ model Course {
     category   Category    @relation(fields: [catId], references: [id], onDelete: Cascade)
     user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
     favourites Favourite[]
+    enrolments Enrolment[]
 
     @@index([userId, catId])
+}
+
+model Enrolment {
+    id             Int           @id @default(autoincrement())
+    userId         Int
+    courseId       Int
+    order_number   String        @unique
+    price          Int?
+    paymentId      String?
+    payment_status PaymentStatus @default(PENDING)
+    status         PaymentStatus @default(PENDING)
+    payment_via    String?
+    created_at     DateTime      @default(now())
+    updated_at     DateTime      @updatedAt
+    user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+    course         Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+    @@index([userId, courseId])
 }
 
 model Favourite {
@@ -117,4 +137,11 @@ enum Role {
 enum Status {
     Pending
     Approved
+}
+
+enum PaymentStatus {
+    PENDING
+    PAID
+    CANCELLED
+    HOLD
 }

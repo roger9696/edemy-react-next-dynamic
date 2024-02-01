@@ -35,8 +35,6 @@
 		"swiper": "^11.0.5"
 	},
 	"devDependencies": {
-		"@types/node": "20.11.15",
-		"prisma": "^5.8.1",
-		"typescript": "5.3.3"
+		"prisma": "^5.8.1"
 	}
 }
