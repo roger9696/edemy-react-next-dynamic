@@ -1,42 +1,118 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
-import React from "react";
-import dynamic from "next/dynamic";
-const RichTextEditor = dynamic(() => import("@mantine/rte"), {
-	ssr: false,
-	loading: () => null,
-});
+import RichTextEditor from "@mantine/rte";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+import axios from "axios";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import Input from "../FormHelpers/Input";
+import SetPrice from "../FormHelpers/SetPrice";
 
 const CourseCreateForm = ({}) => {
-  return (
-    <form>
-      <div className="row">
-        <div className="col-md-6">
-          <div className="form-group">
-            <label className="form-label fw-semibold">Course Title</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Course Title"
-              name="title"
-            />
-          </div>
-        </div>
+	const [isLoading, setIsLoading] = useState(false);
+	const router = useRouter();
+	const {
+		register,
+		handleSubmit,
+		watch,
+		setValue,
+		formState: { errors },
+	} = useForm({
+		defaultValues: {
+			userId: "",
+			catId: "",
+			title: "",
+			description: "",
+			regular_price: "",
+			before_price: "",
+			lessons: "",
+			duration: "",
+			image: "",
+			access_time: "",
+			requirements: "",
+			what_you_will_learn: "",
+			who_is_this_course_for: "",
+		},
+	});
 
-        <div className="col-md-6">
-          <div className="form-group">
-            <label className="form-label fw-semibold">Lessons</label>
-            <input
-              type="number"
-              className="form-control"
-              placeholder="5"
-              name="lessons"
-            />
-          </div>
-        </div>
+	const regular = watch("regular_price");
+	const before = watch("before_price");
 
-        <div className="col-md-6">
+	return (
+		<form>
+			<div className="row">
+				<div className="col-md-6">
+					<Input
+						label="Course Title"
+						id="title"
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+					/>
+				</div>
+
+				<div className="col-md-6">
+					<Input
+						label="Lessons"
+						id="lessons"
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+					/>
+				</div>
+
+				<div className="col-md-6">
+					<SetPrice
+						label="Regular Price"
+						id="regular_price"
+						required
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+						value={regular}
+						onChange={(newValue) =>
+							setValue("regular_price", newValue)
+						}
+					/>
+				</div>
+
+				<div className="col-md-6">
+					<SetPrice
+						label="Before Price"
+						id="before_price"
+						required
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+						value={before}
+						onChange={(newValue) =>
+							setValue("before_price", newValue)
+						}
+					/>
+				</div>
+
+				<div className="col-md-6">
+					<Input
+						label="Duration"
+						id="duration"
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+					/>
+				</div>
+
+				<div className="col-md-6">
+					<Input
+						label="Access Time"
+						id="access_time"
+						disabled={isLoading}
+						register={register}
+						errors={errors}
+					/>
+				</div>
+
+				<div className="col-md-6">
 					<div className="form-group">
 						<label className="form-label fw-semibold">
 							Course Image
@@ -44,7 +120,7 @@ const CourseCreateForm = ({}) => {
 						<input
 							type="file"
 							className="form-control file-control"
-							name="image" 
+							name="image"
 							required={true}
 						/>
 						<div className="form-text">
@@ -53,25 +129,22 @@ const CourseCreateForm = ({}) => {
 
 						<div className="mt-2">
 							<Image
-								src='/images/courses/courses15.jpg'
+								src="/images/courses/courses15.jpg"
 								alt="image"
 								className="img-thumbnail w-100px me-2"
-                width={100}
-                height={100}
+								width={100}
+								height={100}
 							/>
 						</div>
 					</div>
 				</div>
 
-        <div className="col-md-6">
+				<div className="col-md-6">
 					<div className="form-group">
 						<label className="form-label fw-semibold">
 							Access Time
 						</label>
-						<select
-							className="form-select"
-							name="access_time"  
-						>
+						<select className="form-select" name="access_time">
 							<option value="">Select</option>
 							<option value="Lifetime">Lifetime</option>
 							<option value="Three Months">Three Months</option>
@@ -81,7 +154,7 @@ const CourseCreateForm = ({}) => {
 					</div>
 				</div>
 
-        <div className="col-md-6">
+				<div className="col-md-6">
 					<div className="form-group">
 						<label className="form-label fw-semibold">
 							Overview
@@ -99,16 +172,15 @@ const CourseCreateForm = ({}) => {
 					</div>
 				</div>
 
-        
-
-        <div className="col-12">
-          <button type="submit" className="default-btn">
-            <i className="flaticon-right-arrow"></i>Create Course <span></span>
-          </button>
-        </div>
-      </div>
-    </form>
-  );
+				<div className="col-12">
+					<button type="submit" className="default-btn">
+						<i className="flaticon-right-arrow"></i>Create Course{" "}
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</form>
+	);
 };
 
 export default CourseCreateForm;
