@@ -402,7 +402,7 @@ a:hover {
 }
 
 /* form-control */
-.form-control {
+.form-control, .form-select {
 	height: 50px;
 	color: #221638;
 	box-shadow: unset !important;
@@ -3681,7 +3681,7 @@ Courses Area CSS
 	bottom: -32.5px;
 	text-align: center;
 	line-height: 67px;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 800;
 }
 .single-courses-box .courses-content {
@@ -3758,6 +3758,42 @@ Courses Area CSS
 .single-courses-box.without-boxshadow:hover,
 .single-courses-box.without-boxshadow.active {
 	box-shadow: 0px 8px 16px 0px rgba(146, 184, 255, 0.2);
+}
+
+.single-courses-box.style-2 .video_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(0);
+  transition: 0.5s;
+}
+.single-courses-box.style-2 .video_box i {
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #000;
+  font-size: 50px;
+  border-radius: 80px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.single-courses-box.style-2 .video_box i:hover {
+  background-color: #fe4a55;
+  color: #fff;
+}
+.single-courses-box.style-2:hover .video_box {
+  transform: scale(1);
+}
+.single-courses-box.style-2 .courses-content {
+  padding: 20px;
+}
+.single-courses-box.style-2 .courses-content h3 {
+  font-size: 18px;
 }
 
 .single-courses-item {
@@ -12669,6 +12705,46 @@ Cart Area CSS
 /*================================================
 Checkout Area CSS
 =================================================*/
+.shopping-cart-list {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.shopping-cart-list .content h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.shopping-cart-list .content .list {
+  margin: 0;
+  padding: 0;
+}
+.shopping-cart-list .content .list li {
+  font-size: 14px;
+  color: #606060;
+  display: inline-block;
+  margin-right: 15px;
+}
+.shopping-cart-list .content .list li:last-child {
+  margin-right: 0;
+}
+.shopping-cart-list .action-button {
+  text-align: end;
+}
+.shopping-cart-list .action-button .remove {
+  font-size: 14px;
+}
+.shopping-cart-list .action-button .wishlist {
+  color: #1cab94;
+  font-size: 14px;
+}
+.shopping-cart-list hr {
+  border-color: #cab3b3;
+}
+.shopping-cart-list .col-lg-12:last-child hr {
+  border-color: #eeeeee;
+  display: none;
+}
+
 .user-actions {
 	box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 	background: #ffffff;
