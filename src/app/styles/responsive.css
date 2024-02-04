@@ -4011,7 +4011,16 @@
 		margin-top: 30px;
 	}
 	/* End Learning Management Home */
+
+	.shopping-cart-list .content {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .shopping-cart-list .action-button {
+    text-align: start;
+  }
 }
+
 /* Min width 576px Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 	.container {
@@ -4163,6 +4172,7 @@
 	}
 	/* End Gym coaching Style */
 }
+
 /* Min width 768px Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	body {
@@ -6483,7 +6493,19 @@
 		margin-top: 30px;
 	}
 	/* End Learning Management Home */
+
+	.shopping-cart-list .content {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .shopping-cart-list .content h3 {
+    font-size: 20px;
+  }
+  .shopping-cart-list .action-button {
+    text-align: start;
+  }
 }
+
 /* Min width 992px Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.container {
@@ -7882,6 +7904,7 @@
 	}
 	/* End Learning Management Home */
 }
+
 /* Min width 1200px Max width 1355px */
 @media only screen and (min-width: 1200px) and (max-width: 1355px) {
 	.container {
@@ -8250,6 +8273,7 @@
 	}
 	/* End Learning Management Home */
 }
+
 /* Min width 1400px to Max width 1549px */
 @media only screen and (min-width: 1400px) and (max-width: 1549px) {
 	/* College Website */
@@ -8318,6 +8342,7 @@
 	}
 	/* End Online Photography Home */
 }
+
 /* Min width 1550px to Max width 1700px */
 @media only screen and (min-width: 1550px) and (max-width: 1700px) {
 	/* College Website */
@@ -8347,6 +8372,7 @@
 	}
 	/* End Online Photography Home */
 }
+
 /* Min width 1550px */
 @media only screen and (min-width: 1550px) {
 	.edemy-nav .container-fluid {
@@ -8473,6 +8499,7 @@
 	/* End College Website */
 	/* Online Photography Home */
 }
+
 @media only screen and (max-width: 575px) {
 	.edemy-nav .navbar .navbar-nav .nav-item .col {
 		width: 100%;
@@ -8496,6 +8523,7 @@
 		display: none;
 	}
 }
+
 @media only screen and (max-width: 991px) {
 	.edemy-nav .container-fluid {
 		padding-left: 20px;
@@ -8611,4 +8639,4 @@
 		top: 15px;
 		right: 70px;
 	}
-} /*# sourceMappingURL=responsive.css.map */
+} 
