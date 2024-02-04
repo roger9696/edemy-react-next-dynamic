@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import CourseCreateForm from "@/components/Instructor/CourseCreateForm";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
-const Page = () => {
+const Page = async () => {
+	const currentUser = await getCurrentUser();
 	return (
 		<>
 			<div className="ptb-100">
@@ -21,7 +23,7 @@ const Page = () => {
 					</ul>
 
 					<div className="create-course-form">
-						<CourseCreateForm />
+						<CourseCreateForm currentUser={currentUser} />
 					</div>
 				</div>
 			</div>

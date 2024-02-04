@@ -1,27 +1,42 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import RichTextEditor from "@mantine/rte";
+import dynamic from "next/dynamic";
+const RichTextEditor = dynamic(() => import("@mantine/rte"), {
+	ssr: false,
+	loading: () => null,
+});
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {
+	FieldValues,
+	SubmitHandler,
+	useForm,
+	Controller,
+} from "react-hook-form";
 import Input from "../FormHelpers/Input";
 import SetPrice from "../FormHelpers/SetPrice";
+import CategorySelect from "../FormHelpers/CategorySelect";
 
-const CourseCreateForm = ({}) => {
+const CourseCreateForm = ({ currentUser }) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const router = useRouter();
+
+	useEffect(() => {
+		setValue("userId", currentUser.id);
+	}, []);
 	const {
 		register,
 		handleSubmit,
 		watch,
 		setValue,
+		control,
 		formState: { errors },
 	} = useForm({
 		defaultValues: {
 			userId: "",
-			catId: "",
+			category: "",
 			title: "",
 			description: "",
 			regular_price: "",
@@ -38,9 +53,22 @@ const CourseCreateForm = ({}) => {
 
 	const regular = watch("regular_price");
 	const before = watch("before_price");
+	const category = watch("category");
+
+	const onSubmit = (data) => {
+		console.log(data);
+	};
+
+	const setCustomValue = (id, value) => {
+		setValue(id, value, {
+			shouldDirty: true,
+			shouldTouch: true,
+			shouldValidate: true,
+		});
+	};
 
 	return (
-		<form>
+		<form onSubmit={handleSubmit(onSubmit)}>
 			<div className="row">
 				<div className="col-md-6">
 					<Input
@@ -49,6 +77,13 @@ const CourseCreateForm = ({}) => {
 						disabled={isLoading}
 						register={register}
 						errors={errors}
+					/>
+				</div>
+				<div className="col-md-6">
+					<CategorySelect
+						value={category}
+						onChange={(value) => setCustomValue("category", value)}
+						label="Category"
 					/>
 				</div>
 
@@ -121,13 +156,13 @@ const CourseCreateForm = ({}) => {
 							type="file"
 							className="form-control file-control"
 							name="image"
-							required={true}
+							// required={true}
 						/>
 						<div className="form-text">
 							Upload image size 750x500!
 						</div>
 
-						<div className="mt-2">
+						{/* <div className="mt-2">
 							<Image
 								src="/images/courses/courses15.jpg"
 								alt="image"
@@ -135,22 +170,7 @@ const CourseCreateForm = ({}) => {
 								width={100}
 								height={100}
 							/>
-						</div>
-					</div>
-				</div>
-
-				<div className="col-md-6">
-					<div className="form-group">
-						<label className="form-label fw-semibold">
-							Access Time
-						</label>
-						<select className="form-select" name="access_time">
-							<option value="">Select</option>
-							<option value="Lifetime">Lifetime</option>
-							<option value="Three Months">Three Months</option>
-							<option value="Six Months">Six Months</option>
-							<option value="1 Year">1 Year</option>
-						</select>
+						</div> */}
 					</div>
 				</div>
 
@@ -159,15 +179,105 @@ const CourseCreateForm = ({}) => {
 						<label className="form-label fw-semibold">
 							Overview
 						</label>
-						<RichTextEditor
-							// controls={controls}
-							// value={course.overview}
-							onChange={(e) =>
-								setCourse((prevState) => ({
-									...prevState,
-									overview: e,
-								}))
-							}
+						<Controller
+							name="description"
+							control={control}
+							defaultValue=""
+							render={({ field }) => (
+								<RichTextEditor
+									controls={[
+										["bold", "italic", "underline", "link"],
+										["unorderedList", "h1", "h2", "h3"],
+										[
+											"alignLeft",
+											"alignCenter",
+											"alignRight",
+										],
+									]}
+									value={field.value}
+									onChange={(value) => field.onChange(value)}
+								/>
+							)}
+						/>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="form-group">
+						<label className="form-label fw-semibold">
+							Requirements
+						</label>
+						<Controller
+							name="requirements"
+							control={control}
+							defaultValue=""
+							render={({ field }) => (
+								<RichTextEditor
+									controls={[
+										["bold", "italic", "underline", "link"],
+										["unorderedList", "h1", "h2", "h3"],
+										[
+											"alignLeft",
+											"alignCenter",
+											"alignRight",
+										],
+									]}
+									value={field.value}
+									onChange={(value) => field.onChange(value)}
+								/>
+							)}
+						/>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="form-group">
+						<label className="form-label fw-semibold">
+							What You Will Learn
+						</label>
+						<Controller
+							name="what_you_will_learn"
+							control={control}
+							defaultValue=""
+							render={({ field }) => (
+								<RichTextEditor
+									controls={[
+										["bold", "italic", "underline", "link"],
+										["unorderedList", "h1", "h2", "h3"],
+										[
+											"alignLeft",
+											"alignCenter",
+											"alignRight",
+										],
+									]}
+									value={field.value}
+									onChange={(value) => field.onChange(value)}
+								/>
+							)}
+						/>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="form-group">
+						<label className="form-label fw-semibold">
+							Who is this course for?
+						</label>
+						<Controller
+							name="who_is_this_course_for"
+							control={control}
+							render={({ field }) => (
+								<RichTextEditor
+									controls={[
+										["bold", "italic", "underline", "link"],
+										["unorderedList", "h1", "h2", "h3"],
+										[
+											"alignLeft",
+											"alignCenter",
+											"alignRight",
+										],
+									]}
+									value={field.value}
+									onChange={(value) => field.onChange(value)}
+								/>
+							)}
 						/>
 					</div>
 				</div>
