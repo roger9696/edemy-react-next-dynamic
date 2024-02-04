@@ -95,8 +95,26 @@ model Course {
     user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
     favourites Favourite[]
     enrolments Enrolment[]
+    assets     Asset[]
 
     @@index([userId, catId])
+}
+
+model Asset {
+    id           Int      @id @default(autoincrement())
+    courseId     Int
+    type         Type     @default(video)
+    title        String?
+    file_url     String?
+    video_url    String?
+    video_length String?
+    is_preview   Boolean  @default(false)
+    created_at   DateTime @default(now())
+    updated_at   DateTime @updatedAt
+
+    course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+    @@index([courseId])
 }
 
 model Enrolment {
@@ -132,6 +150,11 @@ enum Role {
     USER
     INSTRUCTOR
     ADMIN
+}
+
+enum Type {
+    file
+    video
 }
 
 enum Status {
