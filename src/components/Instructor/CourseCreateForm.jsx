@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 const RichTextEditor = dynamic(() => import("@mantine/rte"), {
 	ssr: false,
@@ -18,14 +17,12 @@ import {
 import Input from "../FormHelpers/Input";
 import SetPrice from "../FormHelpers/SetPrice";
 import CategorySelect from "../FormHelpers/CategorySelect";
+import ImageUpload from "../FormHelpers/ImageUpload";
 
 const CourseCreateForm = ({ currentUser }) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const router = useRouter();
 
-	useEffect(() => {
-		setValue("userId", currentUser.id);
-	}, []);
 	const {
 		register,
 		handleSubmit,
@@ -35,7 +32,6 @@ const CourseCreateForm = ({ currentUser }) => {
 		formState: { errors },
 	} = useForm({
 		defaultValues: {
-			userId: "",
 			category: "",
 			title: "",
 			description: "",
@@ -54,9 +50,27 @@ const CourseCreateForm = ({ currentUser }) => {
 	const regular = watch("regular_price");
 	const before = watch("before_price");
 	const category = watch("category");
+	const image = watch("image");
 
 	const onSubmit = (data) => {
-		console.log(data);
+		setIsLoading(true);
+		if (!data.image) {
+			toast.error("Please drop image 750x500 before submitting.");
+			setIsLoading(false);
+			return;
+		}
+		axios
+			.post("/api/courses/create", data)
+			.then((response) => {
+				toast.success(response.data.message);
+				router.push("/instructor/courses");
+			})
+			.catch((error) => {
+				toast.error("Something went wrong!");
+			})
+			.finally(() => {
+				setIsLoading(false);
+			});
 	};
 
 	const setCustomValue = (id, value) => {
@@ -148,30 +162,10 @@ const CourseCreateForm = ({ currentUser }) => {
 				</div>
 
 				<div className="col-md-6">
-					<div className="form-group">
-						<label className="form-label fw-semibold">
-							Course Image
-						</label>
-						<input
-							type="file"
-							className="form-control file-control"
-							name="image"
-							// required={true}
-						/>
-						<div className="form-text">
-							Upload image size 750x500!
-						</div>
-
-						{/* <div className="mt-2">
-							<Image
-								src="/images/courses/courses15.jpg"
-								alt="image"
-								className="img-thumbnail w-100px me-2"
-								width={100}
-								height={100}
-							/>
-						</div> */}
-					</div>
+					<ImageUpload
+						onChange={(value) => setCustomValue("image", value)}
+						value={image}
+					/>
 				</div>
 
 				<div className="col-md-6">
