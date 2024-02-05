@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import AdminSideNav from "@/components/Admin/AdminSideNav";
+import { pendingCourses } from "@/actions/pendingCourses";
+import ApproveNowBtn from "./ApproveNowBtn";
 
-const Page = ({}) => {
+const Page = async () => {
+	const { courses } = await pendingCourses();
 	return (
 		<>
 			<div className="main-content">
@@ -17,12 +20,12 @@ const Page = ({}) => {
 								<ul className="nav-style1">
 									<li>
 										<Link href="/admin/courses/">
-											Courses
+											Approved Courses
 										</Link>
 									</li>
 									<li>
 										<Link href="/admin/courses/new-arrival/">
-											New Arrival
+											Pending Courses
 										</Link>
 									</li>
 								</ul>
@@ -41,191 +44,81 @@ const Page = ({}) => {
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>
-													<Link href="#">
-														Sanu - College
-														University HTML Template
-													</Link>
-												</td>
-												<td>$4</td>
-												<td>
-													Teaching &amp; Academics
-												</td>
-												<td>Instructor1</td>
-												<td>0</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-warning btn-sm fs-12"
-															disabled=""
-														>
-															Pending
-														</button>
-													</div>
-												</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-success btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Approve Now
-														</button>
-													</div>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-danger btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Delete
-														</button>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>
-													<Link href="#">
-														District Solutions Agent
-													</Link>
-												</td>
-												<td>$339</td>
-												<td>Lifestyle</td>
-												<td>Instructor</td>
-												<td>0</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-warning btn-sm fs-12"
-															disabled=""
-														>
-															Pending
-														</button>
-													</div>
-												</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-success btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Approve Now
-														</button>
-													</div>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-danger btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Delete
-														</button>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td>
-													<Link href="#">
-														The Complete 2023 Web
-														Development Bootcamp
-													</Link>
-												</td>
-												<td>$30</td>
-												<td>IT &amp; Software</td>
-												<td>Instructor1</td>
-												<td>1</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-warning btn-sm fs-12"
-															disabled=""
-														>
-															Pending
-														</button>
-													</div>
-												</td>
-												<td>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-success btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Approve Now
-														</button>
-													</div>
-													<div
-														className="css-bbq5bh"
-														style={{
-															fontSize: "12px",
-														}}
-													>
-														<button
-															type="button"
-															className="btn btn-danger btn-sm fs-12 ms-2"
-															disabled=""
-														>
-															Delete
-														</button>
-													</div>
-												</td>
-											</tr>
-
-											<tr>
-												<td colSpan="7">
-													<div className="text-center">
-														Empty
-													</div>
-												</td>
-											</tr>
+											{courses.length > 0 ? (
+												courses.map((course) => (
+													<tr key={course.id}>
+														<td>
+															<Link
+																href={`/course/${course.slug}/${course.id}`}
+															>
+																{course.title}
+															</Link>
+														</td>
+														<td>
+															$
+															{
+																course.regular_price
+															}
+														</td>
+														<td>
+															{course.category}
+														</td>
+														<td>
+															{course.user.name}
+														</td>
+														<td>0</td>
+														<td>
+															<div
+																className="css-bbq5bh"
+																style={{
+																	fontSize:
+																		"12px",
+																}}
+															>
+																<button
+																	type="button"
+																	className="btn btn-warning btn-sm fs-12"
+																	disabled=""
+																>
+																	{
+																		course.status
+																	}
+																</button>
+															</div>
+														</td>
+														<td>
+															<ApproveNowBtn
+																courseId={
+																	course.id
+																}
+															/>
+															{/* <div
+																className="css-bbq5bh"
+																style={{
+																	fontSize:
+																		"12px",
+																}}
+															>
+																<button
+																	type="button"
+																	className="btn btn-danger btn-sm fs-12 ms-2"
+																	disabled=""
+																>
+																	Delete
+																</button>
+															</div> */}
+														</td>
+													</tr>
+												))
+											) : (
+												<tr>
+													<td colSpan="7">
+														<div className="text-center">
+															Empty
+														</div>
+													</td>
+												</tr>
+											)}
 										</tbody>
 									</table>
 								</div>
