@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import AdminSideNav from "@/components/Admin/AdminSideNav";
 import { approvedCourses } from "@/actions/approvedCourses";
+import Header from "./Header";
 
 const Page = async () => {
 	const { courses } = await approvedCourses();
@@ -16,18 +17,7 @@ const Page = async () => {
 
 						<div className="col-lg-9 col-md-8">
 							<div className="main-content-box">
-								<ul className="nav-style1">
-									<li>
-										<Link href="/admin/courses/">
-											Approved Courses
-										</Link>
-									</li>
-									<li>
-										<Link href="/admin/courses/new-arrival/">
-											Pending Courses
-										</Link>
-									</li>
-								</ul>
+								<Header />
 
 								<div className="table-responsive">
 									<table className="table align-middle table-hover fs-14">

@@ -1,9 +1,13 @@
 import AdminSideNav from "@/components/Admin/AdminSideNav";
 import { getAdminStats } from "@/actions/getAdminStats";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
 const Page = async () => {
 	const { students, instructors, courses, enrolments, videos, assets } =
 		await getAdminStats();
+
+	const currentUser = await getCurrentUser();
+	const isAdmin = currentUser?.role === "ADMIN";
 
 	return (
 		<>
@@ -11,7 +15,7 @@ const Page = async () => {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-lg-3 col-md-4">
-							<AdminSideNav />
+							<AdminSideNav isAdmin={isAdmin} />
 						</div>
 
 						<div className="col-lg-9 col-md-8">

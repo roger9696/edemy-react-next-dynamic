@@ -3,12 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const UserMenu = ({ currentUser }) => {
 	const isAdmin = currentUser?.role === "ADMIN";
-	const currentRoute = usePathname();
 
 	return (
 		<>
@@ -23,14 +21,6 @@ const UserMenu = ({ currentUser }) => {
 			{currentUser && (
 				<>
 					<div className="option-item">
-						{/* <button
-							className="default-btn"
-							onClick={() => signOut()}
-						>
-							<i className="flaticon-user"></i> Logout{" "}
-							<span></span>
-						</button> */}
-
 						<div className="dropdown profile-dropdown">
 							<div className="img ptb-15">
 								<Image
@@ -73,13 +63,25 @@ const UserMenu = ({ currentUser }) => {
 									<hr className="dropdown-divider" />
 								</li>
 
+								{isAdmin ? (
+									<li>
+										<Link
+											className="dropdown-item"
+											href="/admin/"
+										>
+											<i className="bx bxs-dashboard"></i>{" "}
+											My Dashboard
+										</Link>
+									</li>
+								) : null}
+
 								<li>
 									<Link
 										className="dropdown-item"
-										href="/admin/"
+										href="instructor/courses"
 									>
 										<i className="bx bxs-dashboard"></i> My
-										Dashboard
+										Courses
 									</Link>
 								</li>
 
