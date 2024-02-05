@@ -63,7 +63,9 @@ const CourseCreateForm = ({ currentUser }) => {
 			.post("/api/courses/create", data)
 			.then((response) => {
 				toast.success(response.data.message);
-				router.push("/instructor/courses");
+				router.push(
+					`/instructor/course/${response.data.course.id}/videos`
+				);
 			})
 			.catch((error) => {
 				toast.error("Something went wrong!");

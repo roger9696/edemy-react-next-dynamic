@@ -56,7 +56,7 @@ export async function POST(request) {
 			}
 		});
 
-		await prisma.course.create({
+		const course = await prisma.course.create({
 			data: {
 				title,
 				slug,
@@ -78,6 +78,7 @@ export async function POST(request) {
 		return NextResponse.json(
 			{
 				message: "Course submitted & get approve soon.",
+				course,
 			},
 			{ status: 200 }
 		);

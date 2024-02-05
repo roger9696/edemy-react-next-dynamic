@@ -7,7 +7,6 @@ import Link from "next/link";
 const Header = () => {
 	const pathname = usePathname();
 	const params = useParams();
-	console.log(params);
 	return (
 		<ul className="nav-style1">
 			<li>

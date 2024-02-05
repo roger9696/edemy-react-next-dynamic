@@ -12,7 +12,7 @@ const Page = async ({ params }) => {
 		<>
 			<div className="ptb-100">
 				<div className="container">
-					<h2 className="fw-bold mb-4">Create the Course</h2>
+					<h2 className="fw-bold mb-4">Edit: {course[0].title}</h2>
 
 					<Header />
 

@@ -12,8 +12,11 @@ export async function getCourseById(params) {
 				user: true,
 			},
 		});
+		const videos = await prisma.asset.findMany({
+			where: { courseId: parseInt(courseId), type: "video" },
+		});
 
-		return { course };
+		return { course, videos };
 	} catch (error) {
 		console.error("Error fetching counts:", error);
 	}
