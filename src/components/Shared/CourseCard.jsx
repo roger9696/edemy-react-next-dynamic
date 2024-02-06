@@ -3,15 +3,25 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { stripHtmlAndTruncate } from "@/utils/stripHtmlAndTruncate";
 
-const CourseCard = ({ grid = "col-md-6 col-lg-4" }) => {
+const CourseCard = ({
+	id,
+	title,
+	slug,
+	description,
+	image,
+	regular_price,
+	user,
+	grid = "col-md-6 col-lg-4",
+}) => {
 	return (
 		<div className={grid}>
 			<div className="single-courses-box">
 				<div className="courses-image">
 					<Link href="/single-courses-1" className="d-block image">
 						<Image
-							src="/images/courses/courses1.jpg"
+							src={image}
 							width={750}
 							height={500}
 							alt="image"
@@ -22,7 +32,7 @@ const CourseCard = ({ grid = "col-md-6 col-lg-4" }) => {
 						<i className="flaticon-heart"></i>
 					</Link>
 
-					<div className="price shadow">$39</div>
+					<div className="price shadow">${regular_price}</div>
 				</div>
 
 				<div className="courses-content">
@@ -34,21 +44,14 @@ const CourseCard = ({ grid = "col-md-6 col-lg-4" }) => {
 							className="rounded-circle"
 							alt="image"
 						/>
-						<span>Alex Morgan</span>
+						<span>{user.name}</span>
 					</div>
 
 					<h3>
-						<Link href="/single-courses-1">
-							Deep Learning a-z™: Hands-on Artificial Neural
-							Networks
-						</Link>
+						<Link href={`/course/${slug}/${id}`}>{title}</Link>
 					</h3>
 
-					<p>
-						This master level course is for you if you are looking
-						to learn the DL & ANN topics in and out within a short
-						time!
-					</p>
+					<p>{stripHtmlAndTruncate(description, 15)}</p>
 
 					<ul className="courses-box-footer d-flex justify-content-between align-items-center">
 						<li>

@@ -1,3 +1,4 @@
+import { getHomepageCourses } from "@/actions/getCourses";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import Banner from "@/components/Index/Banner";
 import DistanceLearning from "@/components/Index/DistanceLearning";
@@ -14,11 +15,12 @@ import LatestNews from "@/components/Shared/LatestNews";
 
 export default async function Home() {
 	const currentUser = await getCurrentUser();
+	const { courses } = await getHomepageCourses();
 	return (
 		<>
 			<Banner currentUser={currentUser} />
 			<Features />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<DistanceLearning />
 			<Testimonials />
 			<SelfDevelopmentCourse currentUser={currentUser} />
