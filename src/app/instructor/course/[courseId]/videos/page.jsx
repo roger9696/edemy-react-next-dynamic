@@ -2,11 +2,11 @@ import React from "react";
 import { getCourseById } from "@/actions/getCourseById";
 import Header from "../../Header";
 import CourseVideos from "@/components/Instructor/CourseVideos";
+import DeleteButton from "./DeleteButton";
 
 const Page = async ({ params }) => {
 	const { course, videos } = await getCourseById(params);
 
-	console.log(videos);
 	return (
 		<>
 			<div className="ptb-100">
@@ -21,13 +21,9 @@ const Page = async ({ params }) => {
 						<div className="row">
 							{videos.map((vdo) => (
 								<>
-									<div className="col-md-3">
+									<div className="col-md-3" key={vdo.id}>
 										<div className="card">
-											<video
-												key={vdo.id}
-												width="100%"
-												controls
-											>
+											<video width="100%" controls>
 												<source
 													src={vdo.video_url}
 													type="video/mp4"
@@ -40,9 +36,9 @@ const Page = async ({ params }) => {
 												<h6 className="card-title">
 													{vdo.title}
 												</h6>
-												<button className="btn btn-danger btn-sm">
-													<i className="bx bx-trash"></i>
-												</button>
+												<DeleteButton
+													videoId={vdo.id}
+												/>
 											</div>
 										</div>
 									</div>

@@ -17,7 +17,7 @@ export async function POST(request, { params }) {
 
 		const body = await request.json();
 
-		const { title, video_url } = body;
+		const { title, file_url } = body;
 
 		Object.keys(body).forEach((value) => {
 			if (!body[value]) {
@@ -33,7 +33,8 @@ export async function POST(request, { params }) {
 		await prisma.asset.create({
 			data: {
 				title,
-				video_url,
+				file_url,
+				type: "file",
 				courseId: parseInt(courseId),
 			},
 		});
@@ -55,38 +56,38 @@ export async function POST(request, { params }) {
 	}
 }
 
-export async function DELETE(request, { params }) {
-	const { courseId: videoId } = params;
-	try {
-		const currentUser = await getCurrentUser();
-		if (!currentUser) {
-			return NextResponse.json(
-				{
-					message: "Unauthorized user.",
-				},
-				{ status: 401 }
-			);
-		}
+// export async function DELETE(request, { params }) {
+// 	const { courseId: assetId } = params;
+// 	try {
+// 		const currentUser = await getCurrentUser();
+// 		if (!currentUser) {
+// 			return NextResponse.json(
+// 				{
+// 					message: "Unauthorized user.",
+// 				},
+// 				{ status: 401 }
+// 			);
+// 		}
 
-		await prisma.asset.delete({
-			where: {
-				id: parseInt(videoId),
-			},
-		});
+// 		await prisma.asset.delete({
+// 			where: {
+// 				id: parseInt(assetId),
+// 			},
+// 		});
 
-		return NextResponse.json(
-			{
-				message: "Video deleted.",
-			},
-			{ status: 200 }
-		);
-	} catch (error) {
-		console.error("Error:", error);
-		return NextResponse.json(
-			{
-				message: "An error occurred.",
-			},
-			{ status: 500 }
-		);
-	}
-}
+// 		return NextResponse.json(
+// 			{
+// 				message: "Video deleted.",
+// 			},
+// 			{ status: 200 }
+// 		);
+// 	} catch (error) {
+// 		console.error("Error:", error);
+// 		return NextResponse.json(
+// 			{
+// 				message: "An error occurred.",
+// 			},
+// 			{ status: 500 }
+// 		);
+// 	}
+// }

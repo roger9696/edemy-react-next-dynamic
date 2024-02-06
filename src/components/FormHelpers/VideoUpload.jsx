@@ -3,6 +3,7 @@
 import React, { useCallback } from "react";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
+import Link from "next/link";
 
 const uploadPreset = process.env.NEXT_CLOUDINARY_PRESET;
 
@@ -40,15 +41,29 @@ const VideoUpload = ({ onChange, value }) => {
 								</div>
 							</div>
 
-							{value && (
-								<div className="text-center position-relative mb-3">
-									<video width="400" controls>
-										<source src={value} type="video/mp4" />
-										Your browser does not support HTML
-										video.
-									</video>
-								</div>
-							)}
+							{value &&
+								(value.endsWith(".mp4") ? (
+									<div className="text-center position-relative mb-3">
+										<video width="400" controls>
+											<source
+												src={value}
+												type="video/mp4"
+											/>
+											Your browser does not support HTML
+											video.
+										</video>
+									</div>
+								) : (
+									<Link href={value} target="_blank">
+										<i
+											className="bx bxs-file"
+											style={{
+												fontSize: "100px",
+												textAlign: "center",
+											}}
+										></i>
+									</Link>
+								))}
 						</>
 					);
 				}}
