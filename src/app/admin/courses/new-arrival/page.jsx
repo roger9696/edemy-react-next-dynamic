@@ -4,16 +4,19 @@ import AdminSideNav from "@/components/Admin/AdminSideNav";
 import { pendingCourses } from "@/actions/pendingCourses";
 import ApproveNowBtn from "./ApproveNowBtn";
 import Header from "../Header";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
 const Page = async () => {
 	const { courses } = await pendingCourses();
+	const currentUser = await getCurrentUser();
+	const isAdmin = currentUser?.role === "ADMIN";
 	return (
 		<>
 			<div className="main-content">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-lg-3 col-md-4">
-							<AdminSideNav />
+							<AdminSideNav isAdmin={isAdmin} />
 						</div>
 
 						<div className="col-lg-9 col-md-8">
@@ -56,7 +59,12 @@ const Page = async () => {
 														<td>
 															{course.user.name}
 														</td>
-														<td>0</td>
+														<td>
+															{course.assets
+																? course.assets
+																		.length
+																: 0}
+														</td>
 														<td>
 															<div
 																className="css-bbq5bh"

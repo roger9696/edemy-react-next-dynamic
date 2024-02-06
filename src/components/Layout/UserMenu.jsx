@@ -70,7 +70,7 @@ const UserMenu = ({ currentUser }) => {
 											href="/admin/"
 										>
 											<i className="bx bxs-dashboard"></i>{" "}
-											My Dashboard
+											Dashboard
 										</Link>
 									</li>
 								) : null}
@@ -78,7 +78,7 @@ const UserMenu = ({ currentUser }) => {
 								<li>
 									<Link
 										className="dropdown-item"
-										href="instructor/courses"
+										href="/instructor/courses"
 									>
 										<i className="bx bxs-dashboard"></i> My
 										Courses

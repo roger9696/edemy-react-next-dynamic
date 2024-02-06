@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import CourseCreateForm from "@/components/Instructor/CourseCreateForm";
 import { getCurrentUser } from "@/actions/getCurrentUser";
 import Header from "../Header";

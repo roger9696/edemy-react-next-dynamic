@@ -49,11 +49,7 @@ const AdminSideNav = ({ isAdmin }) => {
 							<li>
 								<Link href="/admin/courses/">Courses</Link>
 							</li>
-							<li>
-								<Link href="/admin/instructor/">
-									Instructors
-								</Link>
-							</li>
+
 							<li>
 								<Link href="/admin/students/">Students</Link>
 							</li>

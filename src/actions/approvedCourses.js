@@ -13,6 +13,7 @@ export async function approvedCourses() {
 			where: { status: "Approved" },
 			include: {
 				user: true,
+				assets: true,
 			},
 		});
 
