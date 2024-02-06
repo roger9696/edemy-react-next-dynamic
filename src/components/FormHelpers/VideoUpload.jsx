@@ -18,7 +18,7 @@ const VideoUpload = ({ onChange, value }) => {
 
 	return (
 		<div className="form-group">
-			<label className="form-label fw-semibold">Course Image</label>
+			<label className="form-label fw-semibold">Course Video</label>
 			<CldUploadWidget
 				onUpload={handleUpload}
 				uploadPreset={uploadPreset}
