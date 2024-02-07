@@ -19,7 +19,10 @@ const CourseCard = ({
 		<div className={grid}>
 			<div className="single-courses-box">
 				<div className="courses-image">
-					<Link href="/single-courses-1" className="d-block image">
+					<Link
+						href={`/course/${slug}/${id}`}
+						className="d-block image"
+					>
 						<Image
 							src={image}
 							width={750}
