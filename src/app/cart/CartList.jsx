@@ -3,47 +3,30 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useCartStore } from "@/store/cart";
 
-const CartList = () => {
+const CartList = ({ id, title, slug, regular_price, image }) => {
+	const { remove } = useCartStore();
 	return (
 		<tr>
 			<td className="product-thumbnail">
 				<Link href="#">
-					<Image
-						src="/images/products/product1.jpg"
-						width={670}
-						height={800}
-						alt="item"
-					/>
+					<Image src={image} width={670} height={800} alt="item" />
 				</Link>
 			</td>
 
 			<td className="product-name">
-				<Link href="#">Note Book Mockup</Link>
+				<Link href={`/course/${slug}/${id}`}>{title}</Link>
 			</td>
 
 			<td className="product-price">
-				<span className="unit-amount">$250.00</span>
-			</td>
-
-			<td className="product-quantity">
-				<div className="input-counter">
-					<span className="minus-btn">
-						<i className="bx bx-minus"></i>
-					</span>
-					<input type="text" min="1" defaultValue="1" />
-					<span className="plus-btn">
-						<i className="bx bx-plus"></i>
-					</span>
-				</div>
+				<span className="unit-amount">${regular_price}</span>
 			</td>
 
 			<td className="product-subtotal">
-				<span className="subtotal-amount">$250.00</span>
-
-				<Link href="#" className="remove">
+				<button className="remove" onClick={() => remove(id)}>
 					<i className="bx bx-trash"></i>
-				</Link>
+				</button>
 			</td>
 		</tr>
 	);

@@ -8,10 +8,12 @@ import MenuItem from "./MenuItem";
 import MegaMenu from "./MegaMenu";
 import { usePathname } from "next/navigation";
 import UserMenu from "./UserMenu";
+import { useCartStore } from "@/store/cart";
 
 const Navbar = ({ currentUser }) => {
 	const [menu, setMenu] = React.useState(true);
 	const pathname = usePathname();
+	const { count } = useCartStore();
 
 	React.useEffect(() => {
 		let elementId = document.getElementById("navbar");
@@ -95,7 +97,7 @@ const Navbar = ({ currentUser }) => {
 										<div className="cart-btn">
 											<Link href="/cart">
 												<i className="flaticon-shopping-cart"></i>{" "}
-												<span>3</span>
+												<span>{count()}</span>
 											</Link>
 										</div>
 									</div>

@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
 const CoursesDetailsSidebar = ({
+	id,
+	title,
+	slug,
 	image,
 	regular_price,
 	duration,
@@ -70,15 +73,13 @@ const CoursesDetailsSidebar = ({
 					</li>
 				</ul>
 
-				<div className="btn-box">
-					<Link href="#" className="default-btn">
-						<i className="flaticon-shopping-cart"></i> Add to Cart{" "}
-						<span></span>
-					</Link>
-					{/* <Link href="#" className="default-btn">
-						<i className="flaticon-tag"></i> Buy Now <span></span>
-					</Link> */}
-				</div>
+				<AddToCartButton
+					id={id}
+					title={title}
+					slug={slug}
+					regular_price={regular_price}
+					image={image}
+				/>
 
 				<div className="courses-share">
 					<div className="share-info">

@@ -3,8 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import CartList from "./CartList";
+import { useCartStore } from "@/store/cart";
+import { cartTotal } from "@/utils/cartTotal";
 
 const CartContent = () => {
+	const { cart } = useCartStore();
 	return (
 		<div className="cart-area ptb-100">
 			<div className="container">
@@ -13,19 +16,16 @@ const CartContent = () => {
 						<table className="table table-bordered">
 							<thead>
 								<tr>
-									<th scope="col">Product</th>
-									<th scope="col">Name</th>
-									<th scope="col">Unit Price</th>
-									<th scope="col">Quantity</th>
-									<th scope="col">Total</th>
+									<th scope="col">Thumb</th>
+									<th scope="col">Title</th>
+									<th scope="col">Price</th>
 								</tr>
 							</thead>
 
 							<tbody>
-								<CartList />
-								<CartList />
-								<CartList />
-								<CartList />
+								{cart.map((item) => (
+									<CartList key={item.id} {...item} />
+								))}
 							</tbody>
 						</table>
 					</div>
@@ -59,13 +59,7 @@ const CartContent = () => {
 
 						<ul>
 							<li>
-								Subtotal <span>$800.00</span>
-							</li>
-							<li>
-								Shipping <span>$30.00</span>
-							</li>
-							<li>
-								Total <span>$830.00</span>
+								Total <span>${cartTotal(cart)}</span>
 							</li>
 						</ul>
 
