@@ -1,7 +1,13 @@
 import PageBanner from "@/components/Shared/PageBanner";
 import CheckoutContent from "./CheckoutContent";
+import { getCurrentUser } from "@/actions/getCurrentUser";
+import { redirect } from "next/navigation";
 
-const page = () => {
+const page = async () => {
+	const currentUser = await getCurrentUser();
+	if (!currentUser) {
+		redirect("/");
+	}
 	return (
 		<>
 			<PageBanner
