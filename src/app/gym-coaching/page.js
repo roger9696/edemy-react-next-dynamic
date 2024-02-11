@@ -8,14 +8,17 @@ import Instructor from "@/components/GymCoaching/Instructor";
 import LatestBlogPost from "@/components/GymCoaching/LatestBlogPost";
 import TopSellingCourses from "@/components/GymCoaching/TopSellingCourses";
 import WhyChooseUs from "@/components/GymCoaching/WhyChooseUs";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
 			<Features />
 			<WhyChooseUs />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<FunFacts />
 			<FeedbackSlider />
 			<Instructor />

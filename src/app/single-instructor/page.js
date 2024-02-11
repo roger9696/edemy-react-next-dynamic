@@ -9,14 +9,17 @@ import PromoVideo from "@/components/SingleInstructor/PromoVideo";
 import QuoteText from "@/components/SingleInstructor/QuoteText";
 import TopSellingCourses from "@/components/SingleInstructor/TopSellingCourses";
 import UpcomingEvents from "@/components/SingleInstructor/UpcomingEvents";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
 			<Features />
 			<QuoteText />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<Funfacts />
 			<FeedbackSlider />
 			<EducationForEveryone />

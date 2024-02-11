@@ -10,18 +10,16 @@ import LatestNews from "@/components/Shared/LatestNews";
 import ViewAllCourses from "@/components/eLearningSchool/ViewAllCourses";
 import AffordableCertification from "@/components/eLearningSchool/AffordableCertification";
 import { getHomepageCourses } from "@/actions/getCourses";
-import { getCurrentUser } from "@/actions/getCurrentUser";
 
-const page = async() => {
-	const currentUser = await getCurrentUser();
+const page = async () => {
 	const { courses } = await getHomepageCourses();
 	return (
 		<>
-			<Banner />
+			<Banner courses={courses} />
 			<Partner />
 			<Features />
 			<AboutUs />
-			<PopularCourses  courses={courses} />
+			<PopularCourses courses={courses} />
 			<FeedbackSliderWithFunFacts />
 			<GetInstantCourses />
 			<LatestNews />

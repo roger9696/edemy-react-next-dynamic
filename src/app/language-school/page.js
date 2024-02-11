@@ -9,15 +9,18 @@ import WhyChooseUs from "@/components/LanguageSchool/WhyChooseUs";
 import FunFactsTwo from "@/components/Shared/FunFactsTwo";
 import Partner from "@/components/Shared/Partner";
 import SubscribeForm from "@/components/Shared/SubscribeForm";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
 			<LanguageCourses />
 			<WhyChooseUs />
 			<FeedbackSlider />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<FunFactsTwo />
 			<HowToApply />
 			<SignUpForm />

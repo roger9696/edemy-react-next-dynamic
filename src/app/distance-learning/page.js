@@ -10,8 +10,11 @@ import FunFactsThree from "@/components/Shared/FunFactsThree";
 import LatestNews from "@/components/Shared/LatestNews";
 import Partner from "@/components/Shared/Partner";
 import SubscribeForm from "@/components/Shared/SubscribeForm";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
@@ -19,7 +22,7 @@ const page = () => {
 			<CoursesArea />
 			<AboutArea />
 			<FunFactsThree />
-			<PopularCourses />
+			<PopularCourses courses={courses} />
 			<FeedbackSlider />
 			<CourseAdvisor />
 			<PremiumAccess />

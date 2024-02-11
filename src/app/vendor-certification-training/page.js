@@ -11,17 +11,19 @@ import PopularCoursesTwo from "@/components/VendorCertificationTraining/PopularC
 import PremiumAccess from "@/components/VendorCertificationTraining/PremiumAccess";
 import SloganArea from "@/components/VendorCertificationTraining/SloganArea";
 import ViewAllCourses from "@/components/VendorCertificationTraining/ViewAllCourses";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
 	return (
 		<>
 			<Banner />
 			<Partner />
 			<SloganArea />
-			<PopularCourses />
+			<PopularCourses courses={courses} />
 			<AboutArea />
 			<FunFacts />
-			<PopularCoursesTwo />
+			<PopularCoursesTwo courses={courses} />
 			<CourseAdvisor />
 			<PremiumAccess />
 			<Testimonials />

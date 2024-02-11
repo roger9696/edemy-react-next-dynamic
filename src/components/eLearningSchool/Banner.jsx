@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CourseCard from "../Shared/CourseCard";
 
-const Banner = () => {
+const Banner = ({ courses }) => {
 	return (
 		<div className="main-banner">
 			<div className="container-fluid">
@@ -32,8 +32,14 @@ const Banner = () => {
 					<div className="col-lg-6 col-md-12">
 						<div className="main-banner-courses-list">
 							<div className="row">
-								<CourseCard grid="col-lg-6 col-md-6" />
-								<CourseCard grid="col-lg-6 col-md-6" />
+								{courses.slice(0, 2).map((course) => (
+									<CourseCard
+										key={course.id}
+										{...course}
+										grid="col-lg-6 col-md-6"
+									/>
+								))}
+								{/* <CourseCard grid="col-lg-6 col-md-6" /> */}
 							</div>
 
 							<div className="banner-shape1">

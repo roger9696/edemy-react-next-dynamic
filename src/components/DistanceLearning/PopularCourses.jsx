@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import CourseCard from "../Shared/CourseCard";
 
-const PopularCourses = () => {
+const PopularCourses = ({ courses }) => {
 	return (
 		<>
 			<div className="courses-area ptb-100">
@@ -45,21 +45,15 @@ const PopularCourses = () => {
 						modules={[Pagination, Autoplay]}
 						className="courses-slides"
 					>
-						<SwiperSlide>
-							<CourseCard grid="none" />
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<CourseCard grid="none" />
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<CourseCard grid="none" />
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<CourseCard grid="none" />
-						</SwiperSlide>
+						{courses.slice(0, 2).map((course) => (
+							<SwiperSlide>
+								<CourseCard
+									key={course.id}
+									{...course}
+									grid="none"
+								/>
+							</SwiperSlide>
+						))}
 					</Swiper>
 
 					<div className="courses-info">

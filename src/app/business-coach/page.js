@@ -8,8 +8,11 @@ import LatestBlogPost from "@/components/BusinessCoach/LatestBlogPost";
 import NewsletterForm from "@/components/BusinessCoach/NewsletterForm";
 import TopSellingCourses from "@/components/BusinessCoach/TopSellingCourses";
 import UpcomingEvents from "@/components/BusinessCoach/UpcomingEvents";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
@@ -18,7 +21,7 @@ const page = () => {
 			<CoachingTypes />
 			<Funfacts />
 			<FeedbackSlider />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<UpcomingEvents />
 			<LatestBlogPost />
 			<NewsletterForm />

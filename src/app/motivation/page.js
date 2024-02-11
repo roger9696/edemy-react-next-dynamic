@@ -6,14 +6,17 @@ import FeedbackSlider from "@/components/Motivation/FeedbackSlider";
 import NewsletterForm from "@/components/Motivation/NewsletterForm";
 import OurUpcomingEvents from "@/components/Motivation/OurUpcomingEvents";
 import TopSellingCourses from "@/components/Motivation/TopSellingCourses";
+import { getHomepageCourses } from "@/actions/getCourses";
 
-const page = () => {
+const page = async () => {
+	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
 			<Banner />
 			<Features />
 			<AboutMe />
-			<TopSellingCourses />
+			<TopSellingCourses courses={courses} />
 			<FeedbackSlider />
 			<OurUpcomingEvents />
 			<NewsletterForm />
