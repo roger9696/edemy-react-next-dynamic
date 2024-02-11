@@ -44,7 +44,7 @@ const ImageUpload = ({ onChange, value }) => {
 									<Image
 										src={value}
 										alt="listings"
-										width={500}
+										width={150}
 										height={100}
 									/>
 								</div>

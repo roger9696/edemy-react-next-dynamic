@@ -68,10 +68,6 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
-:root {
-	scroll-behavior: initial;
-}
-
 body {
 	padding: 0;
 	margin: 0;
@@ -142,6 +138,11 @@ h6 {
 }
 .d-table-cell {
 	vertical-align: middle;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }
 
 .bg-f7ebeb {
@@ -12721,6 +12722,7 @@ Cart Area CSS
 	position: relative;
 	top: -1px;
 	font-size: 18px;
+	border: none;
 }
 .cart-table table tbody tr td.product-quantity .input-counter {
 	max-width: 130px;
@@ -20324,3 +20326,8 @@ Coaching Banner Area CSS
 	top: 45px;
 }
 /* End op-subscribe-content */ 
+
+.StripeElement {
+	border: 1px solid #eee;
+	padding: 20px;
+}

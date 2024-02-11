@@ -72,6 +72,7 @@ const PaymentForm = () => {
 	};
 
 	const cardElementOptions = {
+		classess: "",
 		hidePostalCode: true,
 	};
 
@@ -80,7 +81,7 @@ const PaymentForm = () => {
 			<div className="order-details">
 				<h3 className="title">Payment</h3>
 				<div className="payment-box">
-					<form onSubmit={onSubmit}>
+					<form onSubmit={onSubmit} className="">
 						<CardElement options={cardElementOptions} />
 						<button
 							className={`default-btn ${
