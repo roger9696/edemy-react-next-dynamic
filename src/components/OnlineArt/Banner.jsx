@@ -35,7 +35,7 @@ const Banner = () => {
 
 								<div className="banner-btn">
 									<Link
-										href="/courses-1"
+										href="/courses"
 										className="default-btn"
 									>
 										<i className="flaticon-user"></i>

@@ -29,7 +29,7 @@ const YogaTraining = () => {
 								alt="image"
 							/>
 							<h3 className="playfair-display-font">
-								<Link href="/courses-1">Flexibility</Link>
+								<Link href="/courses">Flexibility</Link>
 							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur
@@ -37,7 +37,7 @@ const YogaTraining = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now
 							</Link>
 						</div>
@@ -52,7 +52,7 @@ const YogaTraining = () => {
 								alt="image"
 							/>
 							<h3 className="playfair-display-font">
-								<Link href="/courses-1">Comfort</Link>
+								<Link href="/courses">Comfort</Link>
 							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur
@@ -60,7 +60,7 @@ const YogaTraining = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now
 							</Link>
 						</div>
@@ -75,7 +75,7 @@ const YogaTraining = () => {
 								alt="image"
 							/>
 							<h3 className="playfair-display-font">
-								<Link href="/courses-1">Resources</Link>
+								<Link href="/courses">Resources</Link>
 							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur
@@ -83,7 +83,7 @@ const YogaTraining = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now
 							</Link>
 						</div>

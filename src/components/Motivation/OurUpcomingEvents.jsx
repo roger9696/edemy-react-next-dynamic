@@ -31,7 +31,7 @@ const OurUpcomingEvents = () => {
 											York
 										</span>
 										<h3 className="jost-font">
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Fundamentals of Self Leadership
 											</Link>
 										</h3>
@@ -56,7 +56,7 @@ const OurUpcomingEvents = () => {
 											Washington DC
 										</span>
 										<h3 className="jost-font">
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Network of Professional
 											</Link>
 										</h3>
@@ -81,7 +81,7 @@ const OurUpcomingEvents = () => {
 											Athens, Greece
 										</span>
 										<h3 className="jost-font">
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Conference on Literacy Teaching
 											</Link>
 										</h3>

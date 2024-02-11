@@ -23,7 +23,7 @@ const LatestBlogPost = () => {
 							<div className="single-blog-post-item">
 								<div className="post-image">
 									<Link
-										href="/single-blog-1"
+										href="/blog/details"
 										className="d-block"
 									>
 										<Image
@@ -40,7 +40,7 @@ const LatestBlogPost = () => {
 										Education
 									</Link>
 									<h3>
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											7 EMERGENCY HACKS TO STAY HEALTHY
 											WINTER
 										</Link>
@@ -75,7 +75,7 @@ const LatestBlogPost = () => {
 										<div className="single-blog-post-item">
 											<div className="post-image">
 												<Link
-													href="/single-blog-1"
+													href="/blog/details"
 													className="d-block"
 												>
 													<Image
@@ -88,7 +88,7 @@ const LatestBlogPost = () => {
 											</div>
 											<div className="post-content">
 												<h3>
-													<Link href="/single-blog-1">
+													<Link href="/blog/details">
 														SAY BUH-BYE TO HOLIDAY
 														STRESS WITH THIS GYM
 													</Link>
@@ -101,7 +101,7 @@ const LatestBlogPost = () => {
 										<div className="single-blog-post-item">
 											<div className="post-image">
 												<Link
-													href="/single-blog-1"
+													href="/blog/details"
 													className="d-block"
 												>
 													<Image
@@ -115,7 +115,7 @@ const LatestBlogPost = () => {
 
 											<div className="post-content">
 												<h3>
-													<Link href="/single-blog-1">
+													<Link href="/blog/details">
 														10 BEST GIFT IDEAS WHEN
 														YOU’RE IN A PINCH
 													</Link>

@@ -8,7 +8,7 @@ const Sidebar = () => {
 			<div className="widget widget_insight">
 				<ul>
 					<li>
-						<Link href="/about-1">About Us</Link>
+						<Link href="/about">About Us</Link>
 					</li>
 					<li>
 						<Link href="/contact">Contact Us</Link>

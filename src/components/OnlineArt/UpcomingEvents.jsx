@@ -23,7 +23,7 @@ const UpcomingEvents = () => {
 							<div className="oa-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -36,13 +36,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Online Art
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											The Plaza Art Fair
 										</Link>
 									</h3>
@@ -64,7 +64,7 @@ const UpcomingEvents = () => {
 							<div className="oa-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -77,13 +77,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Online Art
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											Park Forest Fine Art Fair
 										</Link>
 									</h3>
@@ -105,7 +105,7 @@ const UpcomingEvents = () => {
 							<div className="oa-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -118,13 +118,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Online Art
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											Port Clinton Art Festival
 										</Link>
 									</h3>

@@ -72,7 +72,7 @@ const WelcomeToeDemyCollege = () => {
 													amet ligula.
 												</p>
 												<Link
-													href="/about-1"
+													href="/about"
 													className="default-btn cw-btn"
 												>
 													Learn More <span></span>

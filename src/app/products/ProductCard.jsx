@@ -9,7 +9,7 @@ const ProductCard = ({ mainClsAtts = "col-lg-4 col-md-6 col-sm-6" }) => {
 		<div className={mainClsAtts}>
 			<div className="single-products-box">
 				<div className="products-image">
-					<Link href="/single-products">
+					<Link href="/products/details">
 						<Image
 							src="/images/products/product1.jpg"
 							width={670}
@@ -37,7 +37,7 @@ const ProductCard = ({ mainClsAtts = "col-lg-4 col-md-6 col-sm-6" }) => {
 
 				<div className="products-content">
 					<h3>
-						<Link href="/single-products">Note Book Mockup</Link>
+						<Link href="/products/details">Note Book Mockup</Link>
 					</h3>
 					<div className="price">
 						<span className="old-price">$321</span>

@@ -65,7 +65,7 @@ const AboutMe = () => {
 									</strong>
 								</p>
 
-								<Link href="/about-1" className="default-btn">
+								<Link href="/about" className="default-btn">
 									<i className="flaticon-user"></i>More About
 									Me<span></span>
 								</Link>

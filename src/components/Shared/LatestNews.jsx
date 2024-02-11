@@ -22,7 +22,7 @@ const LatestNews = () => {
 					<div className="col-lg-4 col-md-6">
 						<div className="single-blog-post">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/blog1.jpg"
 										width={750}
@@ -36,7 +36,7 @@ const LatestNews = () => {
 									Education
 								</Link>
 								<h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										University Admissions Could Face
 										Emergency Controls
 									</Link>
@@ -66,7 +66,7 @@ const LatestNews = () => {
 					<div className="col-lg-4 col-md-6">
 						<div className="single-blog-post">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/blog2.jpg"
 										width={750}
@@ -80,7 +80,7 @@ const LatestNews = () => {
 									Online
 								</Link>
 								<h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										Online Learning Can Prepare Students For
 										A Fast-Changing
 									</Link>
@@ -110,7 +110,7 @@ const LatestNews = () => {
 					<div className="col-lg-4 col-md-6">
 						<div className="single-blog-post">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/blog3.jpg"
 										width={750}
@@ -124,7 +124,7 @@ const LatestNews = () => {
 									Learning
 								</Link>
 								<h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										As Learning Moves Online, Trigger
 										Warnings Must Too
 									</Link>

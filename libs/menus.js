@@ -108,6 +108,18 @@ export const menus = [
 		link: "#",
 		submenu: [
 			{
+				label: "About",
+				link: "/about",
+			},
+			{
+				label: "About 2",
+				link: "/about/2",
+			},
+			{
+				label: "About 3",
+				link: "/about/3",
+			},
+			{
 				label: "Success Story",
 				link: "/success-story",
 			},
@@ -118,6 +130,14 @@ export const menus = [
 			{
 				label: "Gallery",
 				link: "/gallery",
+			},
+			{
+				label: "Events",
+				link: "/events",
+			},
+			{
+				label: "Event Details",
+				link: "/events/single-events",
 			},
 			{
 				label: "FAQs",
@@ -134,24 +154,6 @@ export const menus = [
 			{
 				label: "Coming Soon",
 				link: "/coming-soon",
-			},
-		],
-	},
-	{
-		label: "About",
-		link: "#",
-		submenu: [
-			{
-				label: "About",
-				link: "/about",
-			},
-			{
-				label: "About 2",
-				link: "/about/2",
-			},
-			{
-				label: "About 3",
-				link: "/about/3",
 			},
 		],
 	},
@@ -180,7 +182,7 @@ export const menus = [
 				link: "/college/apply-now",
 			},
 			{
-				label: "business",
+				label: "Business",
 				link: "/college/business",
 			},
 			{
@@ -194,20 +196,6 @@ export const menus = [
 			{
 				label: "Undergraduate",
 				link: "/college/undergraduate",
-			},
-		],
-	},
-	{
-		label: "Events",
-		link: "#",
-		submenu: [
-			{
-				label: "Events",
-				link: "/events",
-			},
-			{
-				label: "Event Details",
-				link: "/events/single-events",
 			},
 		],
 	},

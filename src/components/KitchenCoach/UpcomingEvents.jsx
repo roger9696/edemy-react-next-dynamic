@@ -25,7 +25,7 @@ const UpcomingEvents = () => {
 							<div className="single-kitchen-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -38,13 +38,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Coocking
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											NYC Wine & Food Festival
 										</Link>
 									</h3>
@@ -66,7 +66,7 @@ const UpcomingEvents = () => {
 							<div className="single-kitchen-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -79,13 +79,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Coocking
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											Epcot International Food & Wine
 										</Link>
 									</h3>
@@ -107,7 +107,7 @@ const UpcomingEvents = () => {
 							<div className="single-kitchen-events-box">
 								<div className="events-image">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="d-block"
 									>
 										<Image
@@ -120,13 +120,13 @@ const UpcomingEvents = () => {
 								</div>
 								<div className="events-content">
 									<Link
-										href="/single-events"
+										href="/events/single-events"
 										className="category"
 									>
 										Coocking
 									</Link>
 									<h3 className="font-weight-black">
-										<Link href="/single-events">
+										<Link href="/events/single-events">
 											New Orleans Wine & Food
 										</Link>
 									</h3>

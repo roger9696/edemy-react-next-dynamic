@@ -24,7 +24,7 @@ const LatestBlog = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6">
 						<div className="single-blog-item">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/kindergarten-img1.jpg"
 										width={750}
@@ -40,7 +40,7 @@ const LatestBlog = () => {
 									Preschool
 								</Link>
 								<h3 className="font-weight-black">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										Why Play Is Important in Preschool and
 										Early
 									</Link>
@@ -52,7 +52,7 @@ const LatestBlog = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6">
 						<div className="single-blog-item">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/kindergarten-img2.jpg"
 										width={750}
@@ -69,7 +69,7 @@ const LatestBlog = () => {
 									Books
 								</Link>
 								<h3 className="font-weight-black">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										Best Three Billy Goats Gruff Books for
 										Preschool
 									</Link>
@@ -81,7 +81,7 @@ const LatestBlog = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
 						<div className="single-blog-item">
 							<div className="post-image">
-								<Link href="/single-blog-1" className="d-block">
+								<Link href="/blog/details" className="d-block">
 									<Image
 										src="/images/blog/kindergarten-img3.jpg"
 										width={750}
@@ -98,7 +98,7 @@ const LatestBlog = () => {
 									Theme
 								</Link>
 								<h3 className="font-weight-black">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										Flashlight Literacy Activity for Your
 										Camping Theme
 									</Link>

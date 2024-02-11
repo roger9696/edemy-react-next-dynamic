@@ -17,7 +17,7 @@ const RelatedProducts = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6">
 						<div className="single-products-box">
 							<div className="products-image">
-								<Link href="/single-products">
+								<Link href="/products/details">
 									<Image
 										src="/images/products/product4.jpg"
 										width={670}
@@ -45,7 +45,7 @@ const RelatedProducts = () => {
 
 							<div className="products-content">
 								<h3>
-									<Link href="/single-products">
+									<Link href="/products/details">
 										Stop and Take a Second
 									</Link>
 								</h3>
@@ -69,7 +69,7 @@ const RelatedProducts = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6">
 						<div className="single-products-box">
 							<div className="products-image">
-								<Link href="/single-products">
+								<Link href="/products/details">
 									<Image
 										src="/images/products/product5.jpg"
 										width={670}
@@ -97,7 +97,7 @@ const RelatedProducts = () => {
 
 							<div className="products-content">
 								<h3>
-									<Link href="/single-products">
+									<Link href="/products/details">
 										Real Life Fairytale
 									</Link>
 								</h3>
@@ -121,7 +121,7 @@ const RelatedProducts = () => {
 					<div className="col-lg-4 col-md-6 col-sm-6">
 						<div className="single-products-box">
 							<div className="products-image">
-								<Link href="/single-products">
+								<Link href="/products/details">
 									<Image
 										src="/images/products/product6.jpg"
 										width={670}
@@ -151,7 +151,7 @@ const RelatedProducts = () => {
 
 							<div className="products-content">
 								<h3>
-									<Link href="/single-products">
+									<Link href="/products/details">
 										Running From Me
 									</Link>
 								</h3>

@@ -25,7 +25,7 @@ const LatestBlogPost = () => {
 							<div className="single-post-box">
 								<div className="post-image">
 									<Link
-										href="/single-blog-1"
+										href="/blog/details"
 										className="d-block"
 									>
 										<Image
@@ -48,7 +48,7 @@ const LatestBlogPost = () => {
 									</ul>
 
 									<h3 className="inter-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											University Admissions Could Face
 											Emergency Controls
 										</Link>
@@ -69,7 +69,7 @@ const LatestBlogPost = () => {
 										</li>
 										<li>
 											<Link
-												href="/single-blog-1"
+												href="/blog/details"
 												className="link-btn"
 											>
 												<i className="bx bx-right-arrow-alt"></i>
@@ -84,7 +84,7 @@ const LatestBlogPost = () => {
 							<div className="single-post-box">
 								<div className="post-image">
 									<Link
-										href="/single-blog-1"
+										href="/blog/details"
 										className="d-block"
 									>
 										<Image
@@ -108,7 +108,7 @@ const LatestBlogPost = () => {
 									</ul>
 
 									<h3 className="inter-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											Online Learning Can Prepare Students
 											For A Fast-Changing
 										</Link>
@@ -129,7 +129,7 @@ const LatestBlogPost = () => {
 										</li>
 										<li>
 											<Link
-												href="/single-blog-1"
+												href="/blog/details"
 												className="link-btn"
 											>
 												<i className="bx bx-right-arrow-alt"></i>
@@ -144,7 +144,7 @@ const LatestBlogPost = () => {
 							<div className="single-post-box">
 								<div className="post-image">
 									<Link
-										href="/single-blog-1"
+										href="/blog/details"
 										className="d-block"
 									>
 										<Image
@@ -168,7 +168,7 @@ const LatestBlogPost = () => {
 									</ul>
 
 									<h3 className="inter-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											As Learning Moves Online, Trigger
 											Warnings Must Too
 										</Link>
@@ -189,7 +189,7 @@ const LatestBlogPost = () => {
 										</li>
 										<li>
 											<Link
-												href="/single-blog-1"
+												href="/blog/details"
 												className="link-btn"
 											>
 												<i className="bx bx-right-arrow-alt"></i>

@@ -25,7 +25,7 @@ const FeaturedCourses = () => {
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -47,7 +47,7 @@ const FeaturedCourses = () => {
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -69,7 +69,7 @@ const FeaturedCourses = () => {
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 
-							<Link href="/courses-1" className="link-btn">
+							<Link href="/courses" className="link-btn">
 								Start Now!
 							</Link>
 						</div>
@@ -79,7 +79,7 @@ const FeaturedCourses = () => {
 				<div className="boxes-info">
 					<p>
 						If you want more?{" "}
-						<Link href="/courses-1">View More Courses</Link>
+						<Link href="/courses">View More Courses</Link>
 					</p>
 				</div>
 			</div>

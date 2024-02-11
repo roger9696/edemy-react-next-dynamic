@@ -34,7 +34,7 @@ const LanguageCourses = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="default-btn">
+							<Link href="/courses" className="default-btn">
 								<i className="flaticon-right"></i> View More{" "}
 								<span></span>
 							</Link>
@@ -56,7 +56,7 @@ const LanguageCourses = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="default-btn">
+							<Link href="/courses" className="default-btn">
 								<i className="flaticon-right"></i> View More{" "}
 								<span></span>
 							</Link>
@@ -78,7 +78,7 @@ const LanguageCourses = () => {
 								incididunt ut labore et dolore.
 							</p>
 
-							<Link href="/courses-1" className="default-btn">
+							<Link href="/courses" className="default-btn">
 								<i className="flaticon-right"></i> View More{" "}
 								<span></span>
 							</Link>

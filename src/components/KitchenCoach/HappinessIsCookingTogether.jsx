@@ -41,7 +41,7 @@ const HappinessIsCookingTogether = () => {
 								</p>
 								<div className="cooking-btn">
 									<Link
-										href="/courses-1"
+										href="/courses"
 										className="default-btn"
 									>
 										<i className="flaticon-user"></i>

@@ -21,7 +21,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -38,7 +38,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Global Conference on Business
 												Management
 											</Link>
@@ -55,7 +55,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -72,7 +72,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												International Conference on
 												Teacher Education
 											</Link>
@@ -89,7 +89,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -106,7 +106,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												International Conference on
 												Special Needs Education
 											</Link>
@@ -123,7 +123,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -140,7 +140,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												International Conference on
 												Literacy Teaching
 											</Link>
@@ -157,7 +157,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -174,7 +174,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												International Conference on
 												Educational Administration
 											</Link>
@@ -191,7 +191,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -208,7 +208,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												International Conference on
 												Education and Pedagogy
 											</Link>
@@ -225,7 +225,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -242,7 +242,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Research Conference Aims and
 												Objectives
 											</Link>
@@ -259,7 +259,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -276,7 +276,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Conference on Gender
 												Discrimination in Education
 											</Link>
@@ -293,7 +293,7 @@ const page = () => {
 								<div className="single-events-box">
 									<div className="image">
 										<Link
-											href="/single-events"
+											href="/events/single-events"
 											className="d-block"
 										>
 											<Image
@@ -310,7 +310,7 @@ const page = () => {
 
 									<div className="content">
 										<h3>
-											<Link href="/single-events">
+											<Link href="/events/single-events">
 												Quality and Improvement in
 												Education Conference
 											</Link>

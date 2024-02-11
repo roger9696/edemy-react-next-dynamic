@@ -15,7 +15,7 @@ const BlogList = ({
 		<div className={mainClsAtts}>
 			<div className={imgCls}>
 				<div className="post-image">
-					<Link href="/single-blog-1" className="d-block">
+					<Link href="/blog/details" className="d-block">
 						<Image
 							src={imageUrl}
 							width={750}
@@ -29,7 +29,7 @@ const BlogList = ({
 						Education
 					</Link>
 					<h3>
-						<Link href="/single-blog-1">{title}</Link>
+						<Link href="/blog/details">{title}</Link>
 					</h3>
 					<ul className="post-content-footer d-flex justify-content-between align-items-center">
 						<li>

@@ -110,7 +110,6 @@ h4,
 h5,
 h6 {
 	color: #221638;
-	font-family: "Nunito", sans-serif;
 }
 
 .container {
@@ -280,6 +279,10 @@ a:hover {
 
 .form-group {
 	margin-bottom: 20px;
+}
+
+.form-label {
+	font-weight: 700;
 }
 
 /* section-title */
@@ -1392,6 +1395,9 @@ Navbar Area CSS
   position: relative;
   cursor: pointer;
 }
+.edemy-nav .navbar .others-option .option-item .profile-dropdown .img {
+	flex-shrink: 0;
+}
 .edemy-nav .navbar .others-option .option-item .profile-dropdown .img img {
   border-radius: 100px;
   width: 35px;
@@ -1478,6 +1484,148 @@ Navbar Area CSS
 }
 .navbar-area.is-sticky.pb-0 {
 	padding-bottom: 5px !important;
+}
+
+/* Drawer Menu*/
+.drawer-menu {
+  background: rgba(0, 0, 0, 0.8);
+  display: block;
+  top: 0;
+  left: auto;
+  right: -100%;
+  transition: .5s;
+  -webkit-transition: .5s;
+}
+.drawer-menu .modal-dialog {
+  margin-right: 0;
+  margin-left: auto;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+  width: 320px;
+}
+.drawer-menu.show {
+  display: block;
+  right: 0;
+}
+.drawer-menu .modal-content {
+  border-radius: 0;
+  border: none;
+  background: #fff;
+  height: 100%;
+}
+.drawer-menu .modal-content .modal-body {
+  padding: 20px;
+}
+.drawer-menu .modal-content .modal-body ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.drawer-menu .modal-content .modal-body ul li .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  padding: 4px 0;
+  margin: 7px 0;
+}
+.drawer-menu .modal-content .modal-body ul li .nav-link i {
+	float: right;
+}
+.drawer-menu .modal-content .modal-body ul li .nav-link.active, .drawer-menu .modal-content .modal-body ul li .nav-link:hover {
+  color: #fe4a55;
+}
+.drawer-menu .modal-content .modal-body ul li .dropdown-menu {
+	display: block;
+	position: initial;
+	border: 1px solid #eee;
+	padding: 10px 20px;
+	background-color: #f5f5f5;
+}
+.drawer-menu .modal-content .btn-close {
+  color: red;
+  font-size: 30px;
+  outline: 0 !important;
+  line-height: initial;
+	transition: .5s;
+  -webkit-transition: .5s;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  z-index: 1;
+  background-image: unset;
+  opacity: 1;
+  font-weight: bold;
+}
+.drawer-menu .modal-content .btn-close:not(:disabled):not(.disabled):hover, .drawer-menu .modal-content .btn-close:not(:disabled):not(.disabled):focus {
+  text-decoration: none;
+  opacity: 1;
+  color: #fe4a55 !important;
+}
+.drawer-menu .close-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: zoom-out;
+  left: 0;
+  z-index: -1;
+}
+.drawer-menu .col {
+	flex: initial;
+	padding: 0;
+}
+.drawer-menu .search-box {
+	position: relative;
+	margin-bottom: 10px;
+}
+.drawer-menu .search-box .input-search {
+	display: block;
+	width: 100%;
+	height: 48px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+	transition: 0.5s;
+	color: #221638;
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 15px;
+	padding-top: 1px;
+	padding-bottom: 0;
+	padding-right: 0;
+}
+.drawer-menu .search-box .input-search::-moz-placeholder {
+	color: #848484;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+.drawer-menu .search-box .input-search::placeholder {
+	color: #848484;
+	transition: 0.5s;
+}
+.drawer-menu .search-box .input-search:focus {
+	border-color: #fe4a55;
+}
+.drawer-menu .search-box .input-search:focus::-moz-placeholder {
+	color: transparent;
+}
+.drawer-menu .search-box .input-search:focus::placeholder {
+	color: transparent;
+}
+.drawer-menu .search-box button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 48px;
+	background-color: transparent;
+	border: none;
+	color: #fe4a55;
+	border-radius: 5px;
+	padding: 0 15px;
 }
 
 /* Navbar toggler */
@@ -3859,6 +4007,8 @@ Courses Area CSS
 	color: #b0b9c4;
 	font-size: 25px;
 	line-height: 1;
+	border: none;
+	background-color: transparent;
 }
 .single-courses-item .courses-content .fav:hover {
 	color: #fe4a55;
@@ -3950,6 +4100,8 @@ Courses Area CSS
 	font-size: 30px;
 	z-index: 2;
 	line-height: 1;
+	background-color: transparent;
+	border: none;
 }
 .single-courses-item-box .courses-image .fav:hover {
 	color: #fe4a55;

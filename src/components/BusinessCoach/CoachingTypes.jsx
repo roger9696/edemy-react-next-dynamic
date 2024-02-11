@@ -27,7 +27,7 @@ const CoachingTypes = () => {
 									explain to you how all this mistaken idea of
 									denouncing pleasure and praising.
 								</p>
-								<Link href="/about-1" className="link-btn">
+								<Link href="/about" className="link-btn">
 									Discover More
 								</Link>
 							</div>
@@ -51,7 +51,7 @@ const CoachingTypes = () => {
 									explain to you how all this mistaken idea of
 									denouncing pleasure and praising.
 								</p>
-								<Link href="/about-1" className="link-btn">
+								<Link href="/about" className="link-btn">
 									Discover More
 								</Link>
 							</div>
@@ -75,7 +75,7 @@ const CoachingTypes = () => {
 									explain to you how all this mistaken idea of
 									denouncing pleasure and praising.
 								</p>
-								<Link href="/about-1" className="link-btn">
+								<Link href="/about" className="link-btn">
 									Discover More
 								</Link>
 							</div>

@@ -313,13 +313,13 @@ const Courses = () => {
 
 					<div className="col-lg-12 col-md-12">
 						<div className="courses-info">
-							<Link href="/courses-1" className="default-btn">
+							<Link href="/courses" className="default-btn">
 								<i className="flaticon-user"></i>View All
 								Courses<span></span>
 							</Link>
 							<p>
 								Get into details now?​{" "}
-								<Link href="/courses-1">
+								<Link href="/courses">
 									PM Master's Program
 								</Link>
 							</p>

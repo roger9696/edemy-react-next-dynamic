@@ -33,7 +33,7 @@ const TopCategories = () => {
 								<span>10 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -51,7 +51,7 @@ const TopCategories = () => {
 								<span>20 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -69,7 +69,7 @@ const TopCategories = () => {
 								<span>15 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -87,7 +87,7 @@ const TopCategories = () => {
 								<span>11 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -105,7 +105,7 @@ const TopCategories = () => {
 								<span>10 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -123,7 +123,7 @@ const TopCategories = () => {
 								<span>12 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -141,7 +141,7 @@ const TopCategories = () => {
 								<span>05 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 
@@ -159,7 +159,7 @@ const TopCategories = () => {
 								<span>20 Courses</span>
 							</div>
 
-							<Link href="/courses-1" className="link-btn"></Link>
+							<Link href="/courses" className="link-btn"></Link>
 						</div>
 					</div>
 

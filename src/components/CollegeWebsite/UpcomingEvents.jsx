@@ -65,7 +65,7 @@ const UpcomingEvents = () => {
 													9:00 AM-12:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														Annual art competition
 														event - eDemy college
 														hall
@@ -90,7 +90,7 @@ const UpcomingEvents = () => {
 													11:30 AM-1:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														International conference
 														on educational
 														administration - eDemy
@@ -116,7 +116,7 @@ const UpcomingEvents = () => {
 													11:00 AM-1:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														Annual art competition
 														event - eDemy college
 														hall
@@ -141,7 +141,7 @@ const UpcomingEvents = () => {
 													12:00 PM-5:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														Event on how to fix
 														student struggle - eDemy
 														college hall
@@ -166,7 +166,7 @@ const UpcomingEvents = () => {
 													11:30 AM-1:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														International conference
 														on educational
 														administration - eDemy
@@ -192,7 +192,7 @@ const UpcomingEvents = () => {
 													11:00 AM-1:00 PM
 												</h5>
 												<h4 className="playfair-display-font">
-													<Link href="/single-events">
+													<Link href="/events/single-events">
 														Annual art competition
 														event - eDemy college
 														hall

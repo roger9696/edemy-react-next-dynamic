@@ -19,7 +19,7 @@ const LatestBlogPost = () => {
 						<div className="col-xl-4 col-lg-6 col-md-6">
 							<div className="cw-blog-card">
 								<div className="img">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/college-website/blog-img1.jpg"
 											width={848}
@@ -49,7 +49,7 @@ const LatestBlogPost = () => {
 								</div>
 
 								<h3 className="playfair-display-font">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										We feel very happy studying in eDemy
 										college
 									</Link>
@@ -79,14 +79,14 @@ const LatestBlogPost = () => {
 								</div>
 
 								<h3 className="playfair-display-font">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										Rules for good results of students from
 										eDemy college
 									</Link>
 								</h3>
 
 								<div className="img mb-0 mt-4">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/college-website/blog-img2.jpg"
 											width={848}
@@ -101,7 +101,7 @@ const LatestBlogPost = () => {
 						<div className="col-xl-4 col-lg-6 col-md-6">
 							<div className="cw-blog-card">
 								<div className="img">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/college-website/blog-img3.jpg"
 											width={848}
@@ -131,7 +131,7 @@ const LatestBlogPost = () => {
 								</div>
 
 								<h3 className="playfair-display-font">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										eDemy college admission trends 2021-2022
 										were many
 									</Link>

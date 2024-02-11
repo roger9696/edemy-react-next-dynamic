@@ -66,7 +66,7 @@ const DistanceLearning = () => {
 									</li>
 								</ul>
 
-								<Link href="/courses-1" className="default-btn">
+								<Link href="/courses" className="default-btn">
 									<i className="flaticon-user"></i>View All
 									Courses<span></span>
 								</Link>

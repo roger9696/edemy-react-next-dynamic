@@ -24,7 +24,7 @@ const LatestBlogPost = () => {
 						<div className="col-lg-4 col-md-6">
 							<div className="oa-blog-card">
 								<div className="blog-image">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/instructor-home/blog/blog1.jpg"
 											width={750}
@@ -41,11 +41,11 @@ const LatestBlogPost = () => {
 										<li>April 30, 2023</li>
 									</ul>
 									<h3 className="el-messiri-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											Vibrant Abstract Painting
 										</Link>
 									</h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/online-art/arrow.svg"
 											width={60}
@@ -60,7 +60,7 @@ const LatestBlogPost = () => {
 						<div className="col-lg-4 col-md-6">
 							<div className="oa-blog-card">
 								<div className="blog-image">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/instructor-home/blog/blog2.jpg"
 											width={750}
@@ -77,11 +77,11 @@ const LatestBlogPost = () => {
 										<li>April 30, 2023</li>
 									</ul>
 									<h3 className="el-messiri-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											Helping Artists Launch Web
 										</Link>
 									</h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/online-art/arrow.svg"
 											width={60}
@@ -96,7 +96,7 @@ const LatestBlogPost = () => {
 						<div className="col-lg-4 col-md-6">
 							<div className="oa-blog-card">
 								<div className="blog-image">
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/instructor-home/blog/blog2.jpg"
 											width={750}
@@ -113,11 +113,11 @@ const LatestBlogPost = () => {
 										<li>April 30, 2023</li>
 									</ul>
 									<h3 className="el-messiri-font">
-										<Link href="/single-blog-1">
+										<Link href="/blog/details">
 											Socially Engaged Art
 										</Link>
 									</h3>
-									<Link href="/single-blog-1">
+									<Link href="/blog/details">
 										<Image
 											src="/images/online-art/arrow.svg"
 											width={60}

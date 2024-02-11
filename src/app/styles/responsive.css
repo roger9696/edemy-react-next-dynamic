@@ -7372,6 +7372,7 @@
 	.edemy-nav .navbar .search-box {
 		margin-left: 30px;
 		width: 160px;
+		display: none;
 	}
 	.edemy-nav .navbar .search-box .input-search {
 		height: 40px;
@@ -7917,6 +7918,7 @@
 	}
 	.edemy-nav .navbar .search-box {
 		width: 200px;
+		display: none;
 	}
 	.edemy-nav .navbar .others-option .option-item {
 		margin-left: 20px;
@@ -8274,6 +8276,13 @@
 	/* End Learning Management Home */
 }
 
+@media only screen and (min-width: 1356px) and (max-width: 1400px) {
+	.edemy-nav .navbar .search-box {
+    margin-left: 30px;
+    width: 200px; 
+	}
+}
+
 /* Min width 1400px to Max width 1549px */
 @media only screen and (min-width: 1400px) and (max-width: 1549px) {
 	/* College Website */
@@ -8341,10 +8350,21 @@
 		display: none !important;
 	}
 	/* End Online Photography Home */
+
+	.edemy-nav .navbar .search-box {
+    margin-left: 30px;
+    width: 220px; 
+	}
 }
 
 /* Min width 1550px to Max width 1700px */
 @media only screen and (min-width: 1550px) and (max-width: 1700px) {
+
+	.edemy-nav .navbar .search-box {
+		margin-left: 40px;
+    width: 230px;
+	}
+ 
 	/* College Website */
 	/* cw-hero-banner */
 	.cw-hero-banner .cw-banner-box {
@@ -8373,14 +8393,17 @@
 	/* End Online Photography Home */
 }
 
+@media only screen and (min-width: 1701px) {
+	.edemy-nav .navbar .search-box {
+		margin-left: 90px;
+	}
+}
+
 /* Min width 1550px */
 @media only screen and (min-width: 1550px) {
 	.edemy-nav .container-fluid {
 		padding-left: 120px;
 		padding-right: 120px;
-	}
-	.edemy-nav .navbar .search-box {
-		margin-left: 90px;
 	}
 	.main-banner .container-fluid {
 		max-width: 1480px;
@@ -8514,14 +8537,6 @@
 	.edemy-nav .navbar .others-option .option-item {
 		margin-left: 15px;
 	}
-	.edemy-nav .navbar .others-option .option-item .default-btn {
-		font-size: 11px;
-		padding-left: 12px;
-		padding-right: 12px;
-	}
-	.edemy-nav .navbar .others-option .option-item .default-btn i {
-		display: none;
-	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -8638,5 +8653,17 @@
 		position: absolute;
 		top: 15px;
 		right: 70px;
+	}
+
+	.edemy-nav .navbar .others-option .option-item .default-btn {
+		font-size: 11px;
+		padding: 7px 12px; 
+	}
+	.edemy-nav .navbar .others-option .option-item .default-btn i {
+		display: none;
+	}
+
+	.edemy-nav .navbar .others-option .option-item .profile-dropdown .dropdown-menu {
+    width: 245px; 
 	}
 } 

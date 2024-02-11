@@ -52,7 +52,7 @@ const ChooseProgram = () => {
 										</div>
 
 										<h3 className="playfair-display-font">
-											<Link href="/about-1">
+											<Link href="/about">
 												Certification Courses
 											</Link>
 										</h3>
@@ -84,7 +84,7 @@ const ChooseProgram = () => {
 										</div>
 
 										<h3 className="playfair-display-font">
-											<Link href="/about-1">
+											<Link href="/about">
 												Mens's Coaching
 											</Link>
 										</h3>
@@ -118,7 +118,7 @@ const ChooseProgram = () => {
 										</div>
 
 										<h3 className="playfair-display-font">
-											<Link href="/about-1">
+											<Link href="/about">
 												Women's Coaching
 											</Link>
 										</h3>
