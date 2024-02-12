@@ -13,6 +13,11 @@ export async function pendingCourses() {
 			where: { status: "Pending" },
 			include: {
 				user: true,
+				assets: {
+					select: {
+						id: true,
+					},
+				},
 			},
 		});
 

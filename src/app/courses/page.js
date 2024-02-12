@@ -3,8 +3,12 @@ import PageBanner from "@/components/Shared/PageBanner";
 import React from "react";
 import { getCourses } from "@/actions/getCourses";
 
-const page = async () => {
-	const { courses } = await getCourses();
+export const metadata = {
+	title: "Courses | eDemy - React Next.js Education LMS Template",
+};
+
+const page = async ({ searchParams }) => {
+	const { courses } = await getCourses(searchParams);
 	return (
 		<>
 			<PageBanner

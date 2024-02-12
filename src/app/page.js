@@ -13,6 +13,10 @@ import DistanceLearningTwo from "@/components/Shared/DistanceLearningTwo";
 import FunFactsFour from "@/components/Shared/FunFactsFour";
 import LatestNews from "@/components/Shared/LatestNews";
 
+export const metadata = {
+	title: "Home | eDemy - React Next.js Education LMS Template",
+};
+
 export default async function Home() {
 	const currentUser = await getCurrentUser();
 	const { courses } = await getHomepageCourses();

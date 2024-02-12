@@ -2,6 +2,7 @@
 
 import React from "react";
 import CourseCard from "../Shared/CourseCard";
+import Filter from "./Filter";
 
 const CoursesContent = ({ courses }) => {
 	return (
@@ -10,22 +11,13 @@ const CoursesContent = ({ courses }) => {
 				<div className="edemy-grid-sorting row align-items-center">
 					<div className="col-lg-8 col-md-6 result-count">
 						<p>
-							We found <span className="count">12</span> courses
-							available for you
+							We found{" "}
+							<span className="count">{courses.length}</span>{" "}
+							courses available for you
 						</p>
 					</div>
 
-					<div className="col-lg-4 col-md-6 ordering">
-						<div className="select-box">
-							<select className="form-control">
-								<option>Sort By</option>
-								<option>Popularity</option>
-								<option>Latest</option>
-								<option>Price: low to high</option>
-								<option>Price: high to low</option>
-							</select>
-						</div>
-					</div>
+					<Filter />
 				</div>
 
 				<div className="row">
