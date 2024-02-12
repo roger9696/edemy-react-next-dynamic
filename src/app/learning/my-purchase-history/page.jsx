@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageBanner from "@/components/Shared/PageBanner";
-import { myPurchase } from "@/actions/MyPurchase";
+import { myPurchase } from "@/actions/myPurchase";
 import dateFormat from "@/utils/dateFormat";
 
 const Page = async () => {
