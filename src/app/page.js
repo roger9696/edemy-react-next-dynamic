@@ -14,26 +14,26 @@ import FunFactsFour from "@/components/Shared/FunFactsFour";
 import LatestNews from "@/components/Shared/LatestNews";
 
 export const metadata = {
-	title: "Home | eDemy - React Next.js Education LMS Template",
+  title: "Home | eDemy - React Next.js Education LMS Template",
 };
 
 export default async function Home() {
-	const currentUser = await getCurrentUser();
-	const { courses } = await getHomepageCourses();
-	return (
-		<>
-			<Banner currentUser={currentUser} />
-			<Features />
-			<TopSellingCourses courses={courses} />
-			<DistanceLearning />
-			<Testimonials />
-			<SelfDevelopmentCourse currentUser={currentUser} />
-			<Partner />
-			<IntroVideo />
-			<FunFactsFour />
-			<LatestNews />
-			<DistanceLearningTwo />
-			<Cta />
-		</>
-	);
+  const currentUser = await getCurrentUser();
+  const { courses } = (await getHomepageCourses()) ?? { courses: [] };
+  return (
+    <>
+      <Banner currentUser={currentUser} />
+      <Features />
+      <TopSellingCourses courses={courses} />
+      <DistanceLearning />
+      <Testimonials />
+      <SelfDevelopmentCourse currentUser={currentUser} />
+      <Partner />
+      <IntroVideo />
+      <FunFactsFour />
+      <LatestNews />
+      <DistanceLearningTwo />
+      <Cta />
+    </>
+  );
 }
