@@ -19,7 +19,7 @@ export const metadata = {
 
 export default async function Home() {
   const currentUser = await getCurrentUser();
-  const { courses } = (await getHomepageCourses()) ?? { courses: [] };
+  const { courses } = await getHomepageCourses();
   return (
     <>
       <Banner currentUser={currentUser} />
